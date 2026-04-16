@@ -150,6 +150,14 @@
     </div>
   </div>
 
+  <!-- TRUST STRIP -->
+  <div class="trust-strip">
+    <span>🏆 #1 Rated Donut Shop 2024</span>
+    <span>🚚 Free Delivery Over $15</span>
+    <span>⭐ 4.9/5 from 324 Reviews</span>
+    <span>🔒 Secure Checkout</span>
+  </div>
+
   <!-- TABS -->
   <div class="tabs-section">
     <div class="tabs-nav">
@@ -225,42 +233,100 @@
       </table>
     </div>
 
-    <div class="tab-content" id="tab-reviews" id="reviews">
+    <div class="tab-content" id="tab-reviews">
+      <!-- Reviews Summary -->
+      <div class="reviews-summary">
+        <div class="reviews-big-score">
+          <div class="reviews-big-num">4.9</div>
+          <div class="reviews-big-stars">★★★★★</div>
+          <div class="reviews-big-count">324 reviews</div>
+        </div>
+        <div class="reviews-bars">
+          <div class="review-bar-row">
+            <span class="review-bar-label">5</span>
+            <div class="review-bar-track">
+              <div class="review-bar-fill" style="width: 82%"></div>
+            </div>
+            <span class="review-bar-pct">82%</span>
+          </div>
+          <div class="review-bar-row">
+            <span class="review-bar-label">4</span>
+            <div class="review-bar-track">
+              <div class="review-bar-fill" style="width: 12%"></div>
+            </div>
+            <span class="review-bar-pct">12%</span>
+          </div>
+          <div class="review-bar-row">
+            <span class="review-bar-label">3</span>
+            <div class="review-bar-track">
+              <div class="review-bar-fill" style="width: 4%"></div>
+            </div>
+            <span class="review-bar-pct">4%</span>
+          </div>
+          <div class="review-bar-row">
+            <span class="review-bar-label">2</span>
+            <div class="review-bar-track">
+              <div class="review-bar-fill" style="width: 1%"></div>
+            </div>
+            <span class="review-bar-pct">1%</span>
+          </div>
+          <div class="review-bar-row">
+            <span class="review-bar-label">1</span>
+            <div class="review-bar-track">
+              <div class="review-bar-fill" style="width: 1%"></div>
+            </div>
+            <span class="review-bar-pct">1%</span>
+          </div>
+        </div>
+      </div>
+
       <div class="review-item">
         <div class="review-header">
           <div class="review-av">😍</div>
           <div class="review-meta">
             <strong>Sarah M.</strong>
-            <span>January 2024 · Verified Purchase</span>
+            <span>January 2024 <span class="verified-badge">Verified</span></span>
           </div>
           <span class="review-stars-sm">★★★★★</span>
         </div>
         <p class="review-text-body">"Honestly the best donut I've ever had. The glaze is
           perfectly sweet, not too heavy. I ordered a dozen and they disappeared in minutes."</p>
       </div>
-      <div class="review-item review-item--tilt-right">
+      <div class="review-item">
         <div class="review-header">
-          <div class="review-av review-av--blue">😎</div>
+          <div class="review-av" style="background: var(--blue)">😎</div>
           <div class="review-meta">
             <strong>Jake T.</strong>
-            <span>February 2024 · Verified Purchase</span>
+            <span>February 2024 <span class="verified-badge">Verified</span></span>
           </div>
           <span class="review-stars-sm">★★★★★</span>
         </div>
         <p class="review-text-body">"My kids went absolutely wild. Classic glazed for
           life! We get these every Sunday morning now — it's become a family ritual."</p>
       </div>
-      <div class="review-item review-item--tilt-left">
+      <div class="review-item">
         <div class="review-header">
-          <div class="review-av review-av--green">🎉</div>
+          <div class="review-av" style="background: var(--green)">🎉</div>
           <div class="review-meta">
             <strong>Priya K.</strong>
-            <span>March 2024 · Verified Purchase</span>
+            <span>March 2024 <span class="verified-badge">Verified</span></span>
           </div>
           <span class="review-stars-sm">★★★★★</span>
         </div>
         <p class="review-text-body">"Ordered for a birthday party. Everyone was asking
           where I got them. These donuts are genuinely the best thing at any celebration."</p>
+      </div>
+      <div class="review-item">
+        <div class="review-header">
+          <div class="review-av" style="background: var(--yellow)">🤤</div>
+          <div class="review-meta">
+            <strong>Marcus L.</strong>
+            <span>March 2024 <span class="verified-badge">Verified</span></span>
+          </div>
+          <span class="review-stars-sm">★★★★★</span>
+        </div>
+        <p class="review-text-body">"As a pastry chef, I'm very picky about my donuts. Doughy's Classic Glazed has the
+          perfect ratio of crispy outside to fluffy inside. The glaze caramelizes beautifully. 10/10."</p>
       </div>
       <div class="text-center mt-24">
         <button class="btn btn-yellow" onclick="alert('More reviews coming soon! 🍩')">Load More Reviews</button>
@@ -305,6 +371,19 @@
           <button class="add-btn-sm add-btn-sm--mocha" onclick="event.preventDefault()">+ Add</button>
         </div>
       </a>
+    </div>
+  </div>
+
+  <!-- STICKY ADD TO CART BAR -->
+  <div class="sticky-cart-bar" id="stickyCartBar">
+    <div class="sticky-cart-info">
+      <span class="sticky-cart-emoji">🍩</span>
+      <span class="sticky-cart-name">Classic Glazed</span>
+      <span class="sticky-cart-price">$2.50</span>
+    </div>
+    <div class="sticky-cart-actions">
+      <a href="cart.html" class="btn btn-pink btn-sm" onclick="showToast()">🛒 Add to Cart</a>
+      <a href="checkout.html" class="btn btn-yellow btn-sm">⚡ Buy Now</a>
     </div>
   </div>
 
@@ -385,6 +464,28 @@
       toast.style.transform = 'translateY(0)';
       setTimeout(() => { toast.style.transform = 'translateY(120px)'; }, 2200);
     }
+
+    // Sticky cart bar on scroll
+    const stickyBar = document.getElementById('stickyCartBar');
+    const actionsRow = document.querySelector('.actions-row');
+    if (stickyBar && actionsRow) {
+      window.addEventListener('scroll', function () {
+        const rect = actionsRow.getBoundingClientRect();
+        if (rect.bottom < 0) {
+          stickyBar.classList.add('visible');
+        } else {
+          stickyBar.classList.remove('visible');
+        }
+      });
+    }
+
+    // Thumb click interaction
+    document.querySelectorAll('.thumb').forEach(t => {
+      t.addEventListener('click', function () {
+        document.querySelectorAll('.thumb').forEach(x => x.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
   </script>
 
   <!-- COOKIE CONSENT BAR -->

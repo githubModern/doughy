@@ -1,0 +1,206 @@
+<!-- © Atia Hegazy — atiaeno.com -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — Doughy 🍩</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="auth-page">
+
+  <nav>
+    <a href="index.html" class="nav-logo">🍩 <span>Doughy</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="product.html">Flavors</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-white btn-sm">👤 Login</a>
+      <a href="register.html" class="btn btn-yellow btn-sm">✨ Register</a>
+      <a href="cart.html" class="btn btn-pink cart-btn btn-sm">🛒 Cart <span class="cart-badge">0</span></a>
+    </div>
+    <button class="hamburger" onclick="openMobileNav()"
+      aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-overlay" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-drawer">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="mobile-nav-logo">🍩 <span>Doughy</span></a>
+        <div class="mobile-close" onclick="closeMobileNav()">✕</div>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html">🏠 Home</a>
+        <a href="shop.html">🍩 Shop</a>
+        <a href="product.html">✨ Flavors</a>
+      </div>
+      <div class="mobile-nav-actions">
+        <a href="login.html" class="btn btn-white">👤 Login</a>
+        <a href="register.html" class="btn btn-yellow">✨ Register</a>
+        <a href="cart.html" class="btn btn-pink cart-btn">🛒 Cart <span class="cart-badge">0</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-layout">
+    <!-- LEFT SIDE -->
+    <aside class="auth-side">
+      <div class="auth-side-emoji">🍩</div>
+      <h2 class="auth-side-title">Welcome Back!</h2>
+      <p class="auth-side-desc">Sign in to access your orders, loyalty points, and personalized donut recommendations.
+      </p>
+      <div class="auth-side-perks">
+        <div class="auth-perk">
+          <span class="auth-perk-icon">⭐</span>
+          <span class="auth-perk-text">Earn loyalty points on every order</span>
+        </div>
+        <div class="auth-perk">
+          <span class="auth-perk-icon">🚚</span>
+          <span class="auth-perk-text">Free delivery on orders over $10</span>
+        </div>
+        <div class="auth-perk">
+          <span class="auth-perk-icon">🎂</span>
+          <span class="auth-perk-text">Free donut on your birthday!</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- RIGHT CONTENT -->
+    <main class="auth-content">
+      <div class="auth-content-blob auth-content-blob--1"></div>
+      <div class="auth-content-blob auth-content-blob--2"></div>
+
+      <div class="auth-card">
+        <div class="auth-header">
+          <span class="auth-header-emoji">👋</span>
+          <h1 class="auth-title">Hey, <span>Welcome!</span></h1>
+          <p class="auth-subtitle">Sign in to your Doughy account</p>
+        </div>
+
+        <form class="auth-form" id="loginForm" onsubmit="handleLogin(event)">
+          <div class="auth-form-group">
+            <label class="auth-form-label" for="loginEmail">Email Address</label>
+            <div class="auth-form-input-wrap">
+              <span class="auth-form-icon">📧</span>
+              <input class="auth-form-input" type="email" id="loginEmail" placeholder="jamie@donutlover.com" required />
+            </div>
+          </div>
+
+          <div class="auth-form-group">
+            <label class="auth-form-label" for="loginPassword">Password</label>
+            <div class="auth-form-input-wrap">
+              <span class="auth-form-icon">🔒</span>
+              <input class="auth-form-input" type="password" id="loginPassword" placeholder="••••••••" required />
+              <button type="button" class="auth-form-toggle-pw" onclick="togglePassword('loginPassword', this)"
+                aria-label="Show password">👁️</button>
+            </div>
+          </div>
+
+          <div class="auth-form-row">
+            <label class="auth-checkbox">
+              <input type="checkbox" checked />
+              Remember me
+            </label>
+            <a href="forgot-password.html" class="auth-forgot-link">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="auth-submit-btn">Sign In 🍩</button>
+
+          <div class="auth-divider">
+            <span class="auth-divider-text">or continue with</span>
+          </div>
+
+          <div class="auth-socials">
+            <button type="button" class="auth-social-btn" onclick="alert('Google login coming soon! 🍩')">
+              <span class="auth-social-icon">🔵</span> Google
+            </button>
+            <button type="button" class="auth-social-btn" onclick="alert('Apple login coming soon! 🍩')">
+              <span class="auth-social-icon">🍎</span> Apple
+            </button>
+            <button type="button" class="auth-social-btn" onclick="alert('Facebook login coming soon! 🍩')">
+              <span class="auth-social-icon">💠</span> Facebook
+            </button>
+          </div>
+        </form>
+
+        <p class="auth-footer-text">
+          Don't have an account? <a href="register.html" class="auth-footer-link">Create one free! 🎉</a>
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast">🍩 Welcome back!</div>
+
+  <script>
+    function openMobileNav() {
+      document.getElementById('mobileNav').classList.add('open');
+      document.querySelector('.hamburger').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('open');
+      document.querySelector('.hamburger').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function togglePassword(inputId, btn) {
+      const input = document.getElementById(inputId);
+      if (input.type === 'password') {
+        input.type = 'text';
+        btn.textContent = '🙈';
+      } else {
+        input.type = 'password';
+        btn.textContent = '👁️';
+      }
+    }
+    function handleLogin(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.auth-submit-btn');
+      btn.textContent = '⏳ Signing in...';
+      btn.disabled = true;
+      setTimeout(() => {
+        const toast = document.getElementById('toast');
+        toast.textContent = '🍩 Welcome back, Jamie!';
+        toast.style.transform = 'translateY(0)';
+        setTimeout(() => {
+          toast.style.transform = 'translateY(120px)';
+          window.location.href = 'account.html';
+        }, 1500);
+      }, 1000);
+    }
+  </script>
+
+  <!-- COOKIE CONSENT BAR -->
+  <div class="cookie-bar" id="cookieBar">
+    <div class="cookie-bar-content">
+      <span class="cookie-bar-emoji">🍪</span>
+      <div class="cookie-bar-text">We use cookies to make your experience sweeter! By continuing, you agree to our <a
+          href="cookies.html">Cookie Policy</a>.</div>
+    </div>
+    <div class="cookie-bar-actions">
+      <button class="cookie-btn cookie-btn--accept" onclick="acceptCookies()">Accept All</button>
+      <button class="cookie-btn cookie-btn--settings" onclick="window.location.href='cookies.html'">Settings</button>
+    </div>
+  </div>
+  <script>
+    if (!localStorage.getItem('doughy_consent')) {
+      setTimeout(function () { document.getElementById('cookieBar').classList.add('show'); }, 1500);
+    }
+    function acceptCookies() {
+      localStorage.setItem('doughy_consent', 'accepted');
+      document.getElementById('cookieBar').classList.remove('show');
+    }
+  </script>
+</body>
+
+</html>

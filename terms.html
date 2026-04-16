@@ -1,0 +1,264 @@
+<!-- © Atia Hegazy — atiaeno.com -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Doughy 🍩</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">🍩 <span>Doughy</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="product.html">Flavors</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-white btn-sm">👤 Login</a>
+      <a href="register.html" class="btn btn-yellow btn-sm">✨ Register</a>
+      <a href="cart.html" class="btn btn-pink cart-btn btn-sm">🛒 Cart <span class="cart-badge">3</span></a>
+    </div>
+    <button class="hamburger" onclick="openMobileNav()"
+      aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-overlay" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-drawer">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="mobile-nav-logo">🍩 <span>Doughy</span></a>
+        <div class="mobile-close" onclick="closeMobileNav()">✕</div>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html">🏠 Home</a>
+        <a href="shop.html">🍩 Shop</a>
+        <a href="product.html">✨ Flavors</a>
+      </div>
+      <div class="mobile-nav-actions">
+        <a href="login.html" class="btn btn-white">👤 Login</a>
+        <a href="register.html" class="btn btn-yellow">✨ Register</a>
+        <a href="cart.html" class="btn btn-pink cart-btn">🛒 Cart <span class="cart-badge">3</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-hero">
+    <span class="info-hero-emoji">📜</span>
+    <span class="info-hero-badge">📝 The Fine Print</span>
+    <h1>Terms of <span class="text-pink">Service</span></h1>
+    <p>The boring (but important) stuff. We kept it as simple and donut-friendly as possible.</p>
+  </div>
+
+  <div class="info-page">
+
+    <div class="info-highlight">
+      <h3>📌 Quick Summary</h3>
+      <p>By using Doughy, you agree to play nice, pay for your donuts, and not do anything sketchy. We promise to
+        deliver amazing donuts and treat you fairly. Deal? Deal.</p>
+    </div>
+
+    <div class="info-content">
+      <h2>1️⃣ Acceptance of Terms</h2>
+      <p>By accessing or using the Doughy website ("Service"), you agree to be bound by these Terms of Service
+        ("Terms"). If you disagree with any part, please don't use the Service — but you'll be missing out on great
+        donuts.</p>
+      <p>These Terms apply to all visitors, users, and customers of our website and services.</p>
+    </div>
+
+    <div class="info-content">
+      <h2>2️⃣ Your Account</h2>
+      <p>When you create an account, you agree to:</p>
+      <ul>
+        <li>Provide accurate and complete registration information</li>
+        <li>Keep your password secure and confidential</li>
+        <li>Be responsible for all activity under your account</li>
+        <li>Notify us immediately of any unauthorized access</li>
+      </ul>
+      <p>You must be at least 13 years old to create an account. If you're under 18, you need parental or guardian
+        consent.</p>
+    </div>
+
+    <div class="info-content">
+      <h2>3️⃣ Orders &amp; Payments</h2>
+      <p>When you place an order through Doughy:</p>
+      <ul>
+        <li>All prices are listed in USD and include applicable taxes</li>
+        <li>We reserve the right to refuse or cancel orders (e.g., pricing errors, fraud detection)</li>
+        <li>Payment is processed at the time of order through our secure payment processor (Stripe)</li>
+        <li>You'll receive an email confirmation with order details</li>
+        <li>Promotional codes are single-use unless stated otherwise and cannot be combined</li>
+      </ul>
+    </div>
+
+    <div class="info-content">
+      <h2>4️⃣ Delivery</h2>
+      <p>We aim to deliver your order within the estimated timeframe, but delivery times are not guaranteed. Factors
+        like weather, traffic, or high demand may cause delays.</p>
+      <ul>
+        <li>You must provide a valid delivery address within our service area</li>
+        <li>Someone must be available to receive the delivery</li>
+        <li>If delivery fails due to incorrect address or unavailability, re-delivery fees may apply</li>
+      </ul>
+      <p>For full delivery details, see our <a href="delivery.html">Delivery Info</a> page.</p>
+    </div>
+
+    <div class="info-content">
+      <h2>5️⃣ Refunds &amp; Returns</h2>
+      <p>Due to the perishable nature of our products, all sales are generally final. However:</p>
+      <ul>
+        <li>If your order arrives damaged, incorrect, or missing items — contact us within 24 hours</li>
+        <li>We'll offer a replacement, store credit, or full refund at our discretion</li>
+        <li>Refund requests beyond 24 hours will be reviewed case-by-case</li>
+      </ul>
+      <p>See our full <a href="refund.html">Refund Policy</a> for more details.</p>
+    </div>
+
+    <div class="info-content">
+      <h2>6️⃣ Acceptable Use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the Service for any illegal purpose</li>
+        <li>Attempt to hack, scrape, or disrupt our systems</li>
+        <li>Create fake accounts or place fraudulent orders</li>
+        <li>Harass our staff or other customers</li>
+        <li>Reproduce, distribute, or modify our content without permission</li>
+        <li>Use bots or automated tools to interact with the Service</li>
+      </ul>
+      <p>Violation of these rules may result in account suspension or termination.</p>
+    </div>
+
+    <div class="info-content">
+      <h2>7️⃣ Intellectual Property</h2>
+      <p>All content on Doughy — including logos, text, images, graphics, and code — is owned by Doughy or its licensors
+        and protected by intellectual property laws.</p>
+      <p>You may not use our branding, logos, or content without written permission. Sharing a photo of your donuts on
+        social media? That's more than welcome! 📸</p>
+    </div>
+
+    <div class="info-content">
+      <h2>8️⃣ Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law:</p>
+      <ul>
+        <li>Doughy is provided "as is" without warranties of any kind</li>
+        <li>We are not liable for indirect, incidental, or consequential damages</li>
+        <li>Our total liability for any claim shall not exceed the amount you paid for the specific order in question
+        </li>
+      </ul>
+      <p>This doesn't affect your statutory rights as a consumer.</p>
+    </div>
+
+    <div class="info-content">
+      <h2>9️⃣ Privacy</h2>
+      <p>Your use of the Service is also governed by our <a href="privacy.html">Privacy Policy</a>, which explains how
+        we collect, use, and protect your personal information.</p>
+    </div>
+
+    <div class="info-content">
+      <h2>🔟 Changes to Terms</h2>
+      <p>We may modify these Terms at any time. When we do, we'll update the date below. Continued use of the Service
+        after changes constitutes acceptance of the new Terms.</p>
+      <p>For significant changes, we'll notify you via email or a prominent notice on our website.</p>
+    </div>
+
+    <div class="info-content">
+      <h2>⚖️ Governing Law</h2>
+      <p>These Terms are governed by and construed in accordance with the laws of the State of California, United
+        States, without regard to conflict of law principles.</p>
+    </div>
+
+    <div class="info-updated">Last updated: April 16, 2026</div>
+
+    <div class="info-cta">
+      <h2>Questions About Terms? 📜</h2>
+      <p>If anything is unclear, don't hesitate to reach out.</p>
+      <a href="mailto:legal@doughy.com">📧 Contact Legal Team</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">🍩 <span>Doughy</span></div>
+        <div class="footer-desc">The happiest donut shop in the universe. Made with love, glazed with joy, delivered
+          with a smile since 2020.</div>
+      </div>
+      <div>
+        <div class="footer-heading">Shop</div>
+        <ul class="footer-links">
+          <li><a href="shop.html">All Donuts</a></li>
+          <li><a href="shop.html">Classic Glazed</a></li>
+          <li><a href="shop.html">Specialty</a></li>
+          <li><a href="shop.html">Boxes &amp; Bundles</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Help</div>
+        <ul class="footer-links">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="delivery.html">Delivery Info</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+          <li><a href="account.html">My Account</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+          <li><a href="#">Careers 🍩</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Doughy. All rights reserved. Made with 🍩 and love.</p>
+      <p>&copy; Atia Hegazy — atiaeno.com</p>
+    </div>
+  </footer>
+
+  <script>
+    function openMobileNav() {
+      document.getElementById('mobileNav').classList.add('open');
+      document.querySelector('.hamburger').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('open');
+      document.querySelector('.hamburger').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+  <!-- COOKIE CONSENT BAR -->
+  <div class="cookie-bar" id="cookieBar">
+    <div class="cookie-bar-content">
+      <span class="cookie-bar-emoji">🍪</span>
+      <div class="cookie-bar-text">We use cookies to make your experience sweeter! By continuing, you agree to our <a
+          href="cookies.html">Cookie Policy</a>.</div>
+    </div>
+    <div class="cookie-bar-actions">
+      <button class="cookie-btn cookie-btn--accept" onclick="acceptCookies()">Accept All</button>
+      <button class="cookie-btn cookie-btn--settings" onclick="window.location.href='cookies.html'">Settings</button>
+    </div>
+  </div>
+  <script>
+    if (!localStorage.getItem('doughy_consent')) {
+      setTimeout(function () { document.getElementById('cookieBar').classList.add('show'); }, 1500);
+    }
+    function acceptCookies() {
+      localStorage.setItem('doughy_consent', 'accepted');
+      document.getElementById('cookieBar').classList.remove('show');
+    }
+  </script>
+</body>
+
+</html>

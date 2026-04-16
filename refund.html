@@ -1,0 +1,279 @@
+<!-- © Atia Hegazy — atiaeno.com -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Refund Policy — Doughy 🍩</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">🍩 <span>Doughy</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="product.html">Flavors</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-white btn-sm">👤 Login</a>
+      <a href="register.html" class="btn btn-yellow btn-sm">✨ Register</a>
+      <a href="cart.html" class="btn btn-pink cart-btn btn-sm">🛒 Cart <span class="cart-badge">3</span></a>
+    </div>
+    <button class="hamburger" onclick="openMobileNav()"
+      aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-overlay" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-drawer">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="mobile-nav-logo">🍩 <span>Doughy</span></a>
+        <div class="mobile-close" onclick="closeMobileNav()">✕</div>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html">🏠 Home</a>
+        <a href="shop.html">🍩 Shop</a>
+        <a href="product.html">✨ Flavors</a>
+      </div>
+      <div class="mobile-nav-actions">
+        <a href="login.html" class="btn btn-white">👤 Login</a>
+        <a href="register.html" class="btn btn-yellow">✨ Register</a>
+        <a href="cart.html" class="btn btn-pink cart-btn">🛒 Cart <span class="cart-badge">3</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-hero">
+    <span class="info-hero-emoji">💰</span>
+    <span class="info-hero-badge">✅ Fair &amp; Simple</span>
+    <h1>Refund <span class="text-pink">Policy</span></h1>
+    <p>Your happiness is our priority. If something went wrong, we'll make it right.</p>
+  </div>
+
+  <div class="info-page">
+
+    <div class="info-highlight">
+      <h3>💖 Our Guarantee</h3>
+      <p>If you're not 100% happy with your order, contact us within 24 hours. We'll fix it — no questions, no hassle,
+        no donut left behind.</p>
+    </div>
+
+    <!-- HOW TO GET A REFUND -->
+    <div class="info-content">
+      <h2>🔄 How to Request a Refund</h2>
+      <p>Getting a refund is easy — just follow these simple steps:</p>
+    </div>
+
+    <div class="refund-steps">
+      <div class="refund-step">
+        <span class="refund-step-emoji">📸</span>
+        <h3>Document the Issue</h3>
+        <p>Take a photo of the problem — damaged donuts, wrong items, or anything off.</p>
+      </div>
+      <div class="refund-step">
+        <span class="refund-step-emoji">📧</span>
+        <h3>Contact Us</h3>
+        <p>Email us at support@doughy.com with your order number and photo within 24 hours.</p>
+      </div>
+      <div class="refund-step">
+        <span class="refund-step-emoji">🔍</span>
+        <h3>We Review</h3>
+        <p>Our team will review your request within 1 business day and get back to you.</p>
+      </div>
+      <div class="refund-step">
+        <span class="refund-step-emoji">✅</span>
+        <h3>Get Resolved</h3>
+        <p>We'll offer a refund, replacement, or store credit — your choice!</p>
+      </div>
+    </div>
+
+    <!-- ELIGIBLE SCENARIOS -->
+    <div class="info-content">
+      <h2>✅ Eligible for Refund</h2>
+      <p>You're eligible for a full refund or replacement if:</p>
+      <ul>
+        <li><strong>Wrong items delivered</strong> — you received donuts you didn't order</li>
+        <li><strong>Damaged in transit</strong> — squished, crushed, or visibly damaged</li>
+        <li><strong>Missing items</strong> — your order is incomplete</li>
+        <li><strong>Quality issues</strong> — stale, undercooked, or not up to our standards</li>
+        <li><strong>Late delivery</strong> — order arrived more than 1 hour past the estimated window</li>
+        <li><strong>Allergic reaction concern</strong> — wrong allergen info listed on the product page</li>
+      </ul>
+    </div>
+
+    <div class="info-content">
+      <h2>❌ Not Eligible for Refund</h2>
+      <p>We can't offer refunds for:</p>
+      <ul>
+        <li><strong>Change of mind</strong> — "I wanted chocolate, not strawberry" after delivery</li>
+        <li><strong>Incorrect address</strong> — if you provided the wrong delivery address</li>
+        <li><strong>No one home</strong> — if nobody was available to receive the delivery</li>
+        <li><strong>After 24 hours</strong> — refund requests submitted more than 24 hours after delivery</li>
+        <li><strong>Consumed products</strong> — if the entire order has been eaten (we get it, but still)</li>
+      </ul>
+    </div>
+
+    <!-- REFUND OPTIONS -->
+    <div class="info-content">
+      <h2>💳 Refund Options</h2>
+    </div>
+
+    <div class="info-cards">
+      <div class="info-card info-card--green">
+        <span class="info-card-emoji">💰</span>
+        <h3>Full Refund</h3>
+        <p>Money back to your original payment method within 5–10 business days.</p>
+      </div>
+      <div class="info-card info-card--yellow">
+        <span class="info-card-emoji">🔄</span>
+        <h3>Replacement</h3>
+        <p>We'll re-make and re-deliver your order at no extra cost. Priority delivery!</p>
+      </div>
+      <div class="info-card info-card--pink">
+        <span class="info-card-emoji">🎁</span>
+        <h3>Store Credit</h3>
+        <p>Get credit for your next order — plus a bonus 10% on top as an apology.</p>
+      </div>
+    </div>
+
+    <!-- TIMELINE TABLE -->
+    <div class="info-content">
+      <h2>⏱️ Refund Timeline</h2>
+    </div>
+
+    <div class="info-table-wrap">
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Refund Method</th>
+            <th>Processing Time</th>
+            <th>When You'll See It</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Credit/Debit Card</strong></td>
+            <td>1–2 business days</td>
+            <td>5–10 business days (depends on bank)</td>
+          </tr>
+          <tr>
+            <td><strong>PayPal</strong></td>
+            <td>1 business day</td>
+            <td>1–3 business days</td>
+          </tr>
+          <tr>
+            <td><strong>Store Credit</strong></td>
+            <td>Instant</td>
+            <td>Immediately available in your account</td>
+          </tr>
+          <tr>
+            <td><strong>Replacement Order</strong></td>
+            <td>Same day</td>
+            <td>Delivered within 60 minutes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-content">
+      <h2>🤝 Our Commitment</h2>
+      <p>We believe in doing the right thing. Every single time. If we messed up, we own it. If your donuts weren't
+        perfect, we'll go above and beyond to make it right.</p>
+      <p>Our customer satisfaction rate is <strong>99.2%</strong> — and we're always striving for 100%.</p>
+    </div>
+
+    <div class="info-updated">Last updated: April 16, 2026</div>
+
+    <div class="info-cta">
+      <h2>Need a Refund? 💰</h2>
+      <p>Reach out and we'll sort it out — fast and friendly.</p>
+      <a href="mailto:support@doughy.com">📧 Contact Support</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">🍩 <span>Doughy</span></div>
+        <div class="footer-desc">The happiest donut shop in the universe. Made with love, glazed with joy, delivered
+          with a smile since 2020.</div>
+      </div>
+      <div>
+        <div class="footer-heading">Shop</div>
+        <ul class="footer-links">
+          <li><a href="shop.html">All Donuts</a></li>
+          <li><a href="shop.html">Classic Glazed</a></li>
+          <li><a href="shop.html">Specialty</a></li>
+          <li><a href="shop.html">Boxes &amp; Bundles</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Help</div>
+        <ul class="footer-links">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="delivery.html">Delivery Info</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+          <li><a href="account.html">My Account</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+          <li><a href="#">Careers 🍩</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Doughy. All rights reserved. Made with 🍩 and love.</p>
+      <p>&copy; Atia Hegazy — atiaeno.com</p>
+    </div>
+  </footer>
+
+  <script>
+    function openMobileNav() {
+      document.getElementById('mobileNav').classList.add('open');
+      document.querySelector('.hamburger').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('open');
+      document.querySelector('.hamburger').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+  <!-- COOKIE CONSENT BAR -->
+  <div class="cookie-bar" id="cookieBar">
+    <div class="cookie-bar-content">
+      <span class="cookie-bar-emoji">🍪</span>
+      <div class="cookie-bar-text">We use cookies to make your experience sweeter! By continuing, you agree to our <a
+          href="cookies.html">Cookie Policy</a>.</div>
+    </div>
+    <div class="cookie-bar-actions">
+      <button class="cookie-btn cookie-btn--accept" onclick="acceptCookies()">Accept All</button>
+      <button class="cookie-btn cookie-btn--settings" onclick="window.location.href='cookies.html'">Settings</button>
+    </div>
+  </div>
+  <script>
+    if (!localStorage.getItem('doughy_consent')) {
+      setTimeout(function () { document.getElementById('cookieBar').classList.add('show'); }, 1500);
+    }
+    function acceptCookies() {
+      localStorage.setItem('doughy_consent', 'accepted');
+      document.getElementById('cookieBar').classList.remove('show');
+    }
+  </script>
+</body>
+
+</html>

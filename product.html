@@ -1,0 +1,413 @@
+<!-- © Atia Hegazy — atiaeno.com -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classic Glazed — Doughy 🍩</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">🍩 <span>Doughy</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="product.html">Flavors</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-white btn-sm">👤 Login</a>
+      <a href="register.html" class="btn btn-yellow btn-sm">✨ Register</a>
+      <a href="cart.html" class="btn btn-pink cart-btn btn-sm">🛒 Cart <span class="cart-badge">3</span></a>
+    </div>
+    <button class="hamburger" onclick="openMobileNav()"
+      aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-overlay" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-drawer">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="mobile-nav-logo">🍩 <span>Doughy</span></a>
+        <div class="mobile-close" onclick="closeMobileNav()">✕</div>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html">🏠 Home</a>
+        <a href="shop.html">🍩 Shop</a>
+        <a href="product.html" class="active">✨ Flavors</a>
+      </div>
+      <div class="mobile-nav-actions">
+        <a href="login.html" class="btn btn-white">👤 Login</a>
+        <a href="register.html" class="btn btn-yellow">✨ Register</a>
+        <a href="cart.html" class="btn btn-pink cart-btn">🛒 Cart <span class="cart-badge">3</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="breadcrumb">
+    <a href="index.html">🏠 Home</a>
+    <span>/</span>
+    <a href="shop.html">Shop</a>
+    <span>/</span>
+    <strong>Classic Glazed</strong>
+  </div>
+
+  <div class="product-main">
+    <!-- VISUALS -->
+    <div class="product-visuals">
+      <div class="product-hero-img">
+        <span class="product-emoji-big">🍩</span>
+      </div>
+      <div class="thumbs-row">
+        <div class="thumb active">🍩</div>
+        <div class="thumb">✨</div>
+        <div class="thumb">🍯</div>
+        <div class="thumb">📦</div>
+      </div>
+    </div>
+
+    <!-- INFO -->
+    <div class="product-info">
+      <div class="product-badges">
+        <span class="badge badge-classic">⭐ Fan Favorite</span>
+        <span class="badge badge-hot">🔥 Hot Seller</span>
+        <span class="badge badge-instock">✅ In Stock</span>
+      </div>
+      <h1 class="product-title">Classic <span class="text-pink">Glazed</span></h1>
+      <div class="product-rating">
+        <span class="stars">★★★★★</span>
+        <span class="rating-count">4.9 out of 5</span>
+        <a href="#reviews" class="rating-link">(324 reviews)</a>
+      </div>
+      <p class="product-desc-main">
+        The iconic. The legend. Our golden, pillowy-soft ring donut is fried to perfection and dipped in our house-made
+        sugar glaze. It's the donut that started it all — and the one you'll keep coming back to every single time.
+      </p>
+
+      <div class="price-section">
+        <span class="price-main">$2.50</span>
+        <span class="price-old">$3.00</span>
+        <span class="save-tag">Save 17%!</span>
+      </div>
+
+      <div class="options-section">
+        <span class="options-label">🎂 Size</span>
+        <div class="options-row">
+          <div class="option-chip" onclick="selectOption(this, 'size')">Mini 🤏</div>
+          <div class="option-chip active" onclick="selectOption(this, 'size')">Regular 🍩</div>
+          <div class="option-chip" onclick="selectOption(this, 'size')">Jumbo 😱</div>
+        </div>
+      </div>
+
+      <div class="options-section">
+        <span class="options-label">🍩 Glaze</span>
+        <div class="options-row">
+          <div class="option-chip active" onclick="selectOption(this, 'glaze')">Classic</div>
+          <div class="option-chip" onclick="selectOption(this, 'glaze')">Extra Sweet</div>
+          <div class="option-chip" onclick="selectOption(this, 'glaze')">Less Sugar</div>
+        </div>
+      </div>
+
+      <div class="options-section">
+        <span class="options-label">✨ Toppings</span>
+        <div class="options-row">
+          <div class="option-chip" onclick="toggleTopping(this)">Sprinkles 🌈</div>
+          <div class="option-chip" onclick="toggleTopping(this)">Choco chips 🍫</div>
+          <div class="option-chip" onclick="toggleTopping(this)">Coconut 🥥</div>
+          <div class="option-chip" onclick="toggleTopping(this)">Crushed Oreo</div>
+        </div>
+      </div>
+
+      <div class="qty-section">
+        <span class="qty-label">📦 Qty</span>
+        <div class="qty-control">
+          <button class="qty-btn" onclick="changeQty(-1)">−</button>
+          <div class="qty-num" id="qtyNum">1</div>
+          <button class="qty-btn" onclick="changeQty(1)">+</button>
+        </div>
+      </div>
+
+      <div class="actions-row">
+        <a href="cart.html" class="btn btn-pink btn-big" onclick="showToast()">🛒 Add to Cart</a>
+        <a href="checkout.html" class="btn btn-yellow btn-big">⚡ Buy Now</a>
+        <button class="wishlist-btn" title="Add to wishlist" onclick="this.textContent='❤️'">🤍</button>
+      </div>
+
+      <div class="perks-row">
+        <div class="perk"><span>🚀</span><span>30-min delivery</span></div>
+        <div class="perk"><span>🔥</span><span>Served warm</span></div>
+        <div class="perk"><span>♻️</span><span>Eco packaging</span></div>
+        <div class="perk"><span>💯</span><span>Fresh daily</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs-section">
+    <div class="tabs-nav">
+      <button class="tab-btn active" onclick="showTab('ingredients', this)">🧪 Ingredients</button>
+      <button class="tab-btn" onclick="showTab('nutrition', this)">📊 Nutrition</button>
+      <button class="tab-btn" onclick="showTab('reviews', this)">⭐ Reviews (324)</button>
+    </div>
+
+    <div class="tab-content active" id="tab-ingredients">
+      <p class="tab-desc">Made fresh every morning with only the finest ingredients. No preservatives. No nonsense. Just
+        pure donut magic.</p>
+      <div class="ingredients-grid">
+        <span class="ingredient">🌾 Enriched flour</span>
+        <span class="ingredient">🥚 Free-range eggs</span>
+        <span class="ingredient">🥛 Whole milk</span>
+        <span class="ingredient">🧈 Real butter</span>
+        <span class="ingredient">🍬 Cane sugar</span>
+        <span class="ingredient">🌿 Vanilla extract</span>
+        <span class="ingredient">🧂 Sea salt</span>
+        <span class="ingredient">🍞 Yeast</span>
+        <span class="ingredient">🌻 Sunflower oil</span>
+      </div>
+      <p class="allergen-note">⚠️ Contains: gluten, eggs, dairy. May contain traces of nuts.</p>
+    </div>
+
+    <div class="tab-content" id="tab-nutrition">
+      <p class="tab-desc">Nutrition facts per serving (1 regular donut, 75g)</p>
+      <table class="nutrition-table">
+        <thead>
+          <tr>
+            <th>Nutrient</th>
+            <th>Amount</th>
+            <th>% Daily Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Calories</td>
+            <td>260 kcal</td>
+            <td>13%</td>
+          </tr>
+          <tr>
+            <td>Total Fat</td>
+            <td>11g</td>
+            <td>14%</td>
+          </tr>
+          <tr>
+            <td>Saturated Fat</td>
+            <td>3.5g</td>
+            <td>18%</td>
+          </tr>
+          <tr>
+            <td>Total Carbohydrate</td>
+            <td>36g</td>
+            <td>13%</td>
+          </tr>
+          <tr>
+            <td>Sugars</td>
+            <td>14g</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Protein</td>
+            <td>4g</td>
+            <td>8%</td>
+          </tr>
+          <tr>
+            <td>Sodium</td>
+            <td>270mg</td>
+            <td>12%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tab-content" id="tab-reviews" id="reviews">
+      <div class="review-item">
+        <div class="review-header">
+          <div class="review-av">😍</div>
+          <div class="review-meta">
+            <strong>Sarah M.</strong>
+            <span>January 2024 · Verified Purchase</span>
+          </div>
+          <span class="review-stars-sm">★★★★★</span>
+        </div>
+        <p class="review-text-body">"Honestly the best donut I've ever had. The glaze is
+          perfectly sweet, not too heavy. I ordered a dozen and they disappeared in minutes."</p>
+      </div>
+      <div class="review-item review-item--tilt-right">
+        <div class="review-header">
+          <div class="review-av review-av--blue">😎</div>
+          <div class="review-meta">
+            <strong>Jake T.</strong>
+            <span>February 2024 · Verified Purchase</span>
+          </div>
+          <span class="review-stars-sm">★★★★★</span>
+        </div>
+        <p class="review-text-body">"My kids went absolutely wild. Classic glazed for
+          life! We get these every Sunday morning now — it's become a family ritual."</p>
+      </div>
+      <div class="review-item review-item--tilt-left">
+        <div class="review-header">
+          <div class="review-av review-av--green">🎉</div>
+          <div class="review-meta">
+            <strong>Priya K.</strong>
+            <span>March 2024 · Verified Purchase</span>
+          </div>
+          <span class="review-stars-sm">★★★★★</span>
+        </div>
+        <p class="review-text-body">"Ordered for a birthday party. Everyone was asking
+          where I got them. These donuts are genuinely the best thing at any celebration."</p>
+      </div>
+      <div class="text-center mt-24">
+        <button class="btn btn-yellow" onclick="alert('More reviews coming soon! 🍩')">Load More Reviews</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED -->
+  <div class="related-section">
+    <h2 class="related-heading">You Might Also <span class="text-pink">Love</span> 😍</h2>
+    <p class="related-sub">More delicious donuts waiting for you!</p>
+    <div class="related-grid">
+      <a href="product.html" class="product-card">
+        <span class="product-card-emoji">🍫</span>
+        <div class="product-card-name">Double Choco</div>
+        <div class="related-card-footer">
+          <span class="product-card-price">$3.00</span>
+          <button class="add-btn-sm" onclick="event.preventDefault()">+ Add</button>
+        </div>
+      </a>
+      <a href="product.html" class="product-card">
+        <span class="product-card-emoji">🍓</span>
+        <div class="product-card-name">Strawberry Dream</div>
+        <div class="related-card-footer">
+          <span class="product-card-price">$3.25</span>
+          <button class="add-btn-sm add-btn-sm--blue" onclick="event.preventDefault()">+ Add</button>
+        </div>
+      </a>
+      <a href="product.html" class="product-card">
+        <span class="product-card-emoji">🍯</span>
+        <div class="product-card-name">Honey Glaze</div>
+        <div class="related-card-footer">
+          <span class="product-card-price">$2.50</span>
+          <button class="add-btn-sm add-btn-sm--yellow" onclick="event.preventDefault()">+ Add</button>
+        </div>
+      </a>
+      <a href="product.html" class="product-card">
+        <span class="product-card-emoji">☕</span>
+        <div class="product-card-name">Mocha Rush</div>
+        <div class="related-card-footer">
+          <span class="product-card-price">$3.25</span>
+          <button class="add-btn-sm add-btn-sm--mocha" onclick="event.preventDefault()">+ Add</button>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div id="toast" class="toast">
+    🍩 Added to cart!
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">🍩 <span>Doughy</span></div>
+        <div class="footer-desc">The happiest donut shop in the universe. Made with love, glazed with joy, delivered
+          with a smile since 2020.</div>
+      </div>
+      <div>
+        <div class="footer-heading">Shop</div>
+        <ul class="footer-links">
+          <li><a href="shop.html">All Donuts</a></li>
+          <li><a href="shop.html">Classic Glazed</a></li>
+          <li><a href="shop.html">Specialty</a></li>
+          <li><a href="shop.html">Boxes &amp; Bundles</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Help</div>
+        <ul class="footer-links">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="delivery.html">Delivery Info</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+          <li><a href="account.html">My Account</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+          <li><a href="#">Careers 🍩</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Doughy. All rights reserved. Made with 🍩 and love.</p>
+      <p>© Atia Hegazy — atiaeno.com</p>
+    </div>
+  </footer>
+
+  <script>
+    function openMobileNav() {
+      document.getElementById('mobileNav').classList.add('open');
+      document.querySelector('.hamburger').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('open');
+      document.querySelector('.hamburger').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    let qty = 1;
+    function changeQty(d) {
+      qty = Math.max(1, qty + d);
+      document.getElementById('qtyNum').textContent = qty;
+    }
+    function selectOption(el, group) {
+      document.querySelectorAll(`[onclick*="${group}"]`).forEach(c => c.classList.remove('active'));
+      el.classList.add('active');
+    }
+    function toggleTopping(el) { el.classList.toggle('active'); }
+    function showTab(id, btn) {
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('tab-' + id).classList.add('active');
+      btn.classList.add('active');
+    }
+    function showToast() {
+      const toast = document.getElementById('toast');
+      toast.style.transform = 'translateY(0)';
+      setTimeout(() => { toast.style.transform = 'translateY(120px)'; }, 2200);
+    }
+  </script>
+
+  <!-- COOKIE CONSENT BAR -->
+  <div class="cookie-bar" id="cookieBar">
+    <div class="cookie-bar-content">
+      <span class="cookie-bar-emoji">🍪</span>
+      <div class="cookie-bar-text">We use cookies to make your experience sweeter! By continuing, you agree to our <a
+          href="cookies.html">Cookie Policy</a>.</div>
+    </div>
+    <div class="cookie-bar-actions">
+      <button class="cookie-btn cookie-btn--accept" onclick="acceptCookies()">Accept All</button>
+      <button class="cookie-btn cookie-btn--settings" onclick="window.location.href='cookies.html'">Settings</button>
+    </div>
+  </div>
+  <script>
+    if (!localStorage.getItem('doughy_consent')) {
+      setTimeout(function () { document.getElementById('cookieBar').classList.add('show'); }, 1500);
+    }
+    function acceptCookies() {
+      localStorage.setItem('doughy_consent', 'accepted');
+      document.getElementById('cookieBar').classList.remove('show');
+    }
+  </script>
+</body>
+
+</html>

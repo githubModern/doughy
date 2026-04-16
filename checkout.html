@@ -1,0 +1,402 @@
+<!-- © Atia Hegazy — atiaeno.com -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — Doughy 🍩</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">🍩 <span>Doughy</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="product.html">Flavors</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-white btn-sm">👤 Login</a>
+      <a href="register.html" class="btn btn-yellow btn-sm">✨ Register</a>
+      <a href="cart.html" class="btn btn-pink cart-btn btn-sm">🛒 Cart <span class="cart-badge">3</span></a>
+    </div>
+    <button class="hamburger" onclick="openMobileNav()"
+      aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-overlay" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-drawer">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="mobile-nav-logo">🍩 <span>Doughy</span></a>
+        <div class="mobile-close" onclick="closeMobileNav()">✕</div>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html">🏠 Home</a>
+        <a href="shop.html">🍩 Shop</a>
+        <a href="product.html">✨ Flavors</a>
+      </div>
+      <div class="mobile-nav-actions">
+        <a href="login.html" class="btn btn-white">👤 Login</a>
+        <a href="register.html" class="btn btn-yellow">✨ Register</a>
+        <a href="cart.html" class="btn btn-pink cart-btn">🛒 Cart <span class="cart-badge">3</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="progress-bar">
+    <div class="progress-step step-done">
+      <div class="step-circle">✓</div> Cart
+    </div>
+    <div class="step-line done"></div>
+    <div class="progress-step step-active">
+      <div class="step-circle">2</div> Checkout
+    </div>
+    <div class="step-line"></div>
+    <div class="progress-step step-inactive">
+      <div class="step-circle">3</div> Confirm
+    </div>
+  </div>
+
+  <div class="page-header">
+    <div class="ph-blob"></div>
+    <h1>⚡ <span class="text-blue">Checkout</span></h1>
+    <p>Almost there! Just a few details and your donuts are on their way 🚀</p>
+  </div>
+
+  <div class="checkout-layout">
+    <!-- FORM -->
+    <div class="checkout-form">
+
+      <!-- CONTACT -->
+      <div class="form-section">
+        <h2 class="form-section-title">📧 Contact Info</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input class="form-input" type="text" placeholder="Jamie" value="Jamie" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input class="form-input" type="text" placeholder="Smith" value="Smith" />
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Email Address</label>
+            <input class="form-input" type="email" placeholder="jamie@email.com" value="jamie@email.com" />
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Phone Number</label>
+            <input class="form-input" type="tel" placeholder="+1 (555) 000-0000" value="+1 (555) 123-4567" />
+          </div>
+        </div>
+      </div>
+
+      <!-- DELIVERY ADDRESS -->
+      <div class="form-section">
+        <h2 class="form-section-title">🏠 Delivery Address</h2>
+        <div class="form-grid">
+          <div class="form-group full">
+            <label class="form-label">Street Address</label>
+            <input class="form-input" type="text" placeholder="123 Donut Street" value="123 Donut Street" />
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Apartment / Suite (optional)</label>
+            <input class="form-input" type="text" placeholder="Apt 4B" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">City</label>
+            <input class="form-input" type="text" placeholder="Sprinkle City" value="Sprinkle City" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">ZIP Code</label>
+            <input class="form-input" type="text" placeholder="10001" value="10001" />
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Country</label>
+            <select class="form-select">
+              <option selected>🇺🇸 United States</option>
+              <option>🇨🇦 Canada</option>
+              <option>🇬🇧 United Kingdom</option>
+              <option>🇦🇺 Australia</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Delivery Note (optional)</label>
+            <input class="form-input" type="text" placeholder="Ring the bell twice! 🔔" />
+          </div>
+        </div>
+      </div>
+
+      <!-- DELIVERY METHOD -->
+      <div class="form-section">
+        <h2 class="form-section-title">🚀 Delivery Method</h2>
+        <div class="delivery-options">
+          <div class="delivery-option selected" onclick="selectDelivery(this)">
+            <div class="delivery-radio"></div>
+            <span class="delivery-emoji">🛵</span>
+            <div class="delivery-info">
+              <div class="delivery-name">Express — 30 Minutes</div>
+              <div class="delivery-desc">Hot &amp; fresh to your door in under 30 mins!</div>
+            </div>
+            <div class="delivery-price free">FREE</div>
+          </div>
+          <div class="delivery-option" onclick="selectDelivery(this)">
+            <div class="delivery-radio"></div>
+            <span class="delivery-emoji">📦</span>
+            <div class="delivery-info">
+              <div class="delivery-name">Standard — 1–2 Hours</div>
+              <div class="delivery-desc">Batch delivery. Eco-friendly packaging.</div>
+            </div>
+            <div class="delivery-price free">FREE</div>
+          </div>
+          <div class="delivery-option" onclick="selectDelivery(this)">
+            <div class="delivery-radio"></div>
+            <span class="delivery-emoji">🏪</span>
+            <div class="delivery-info">
+              <div class="delivery-name">Pickup in Store</div>
+              <div class="delivery-desc">Ready in 15 mins. 123 Glaze Ave, Sprinkle City.</div>
+            </div>
+            <div class="delivery-price free">FREE</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAYMENT -->
+      <div class="form-section">
+        <h2 class="form-section-title">💳 Payment</h2>
+        <div class="payment-methods">
+          <div class="pay-method selected" onclick="selectPayment(this, 'card')"><span class="pay-method-icon">💳</span>
+            Card</div>
+          <div class="pay-method" onclick="selectPayment(this, 'paypal')"><span class="pay-method-icon">🅿️</span>
+            PayPal</div>
+          <div class="pay-method" onclick="selectPayment(this, 'apple')"><span class="pay-method-icon">🍎</span> Apple
+            Pay</div>
+          <div class="pay-method" onclick="selectPayment(this, 'google')"><span class="pay-method-icon">🔵</span> Google
+            Pay</div>
+        </div>
+
+        <div class="card-fields active" id="card-fields">
+          <div class="form-grid">
+            <div class="form-group full">
+              <label class="form-label">Card Number</label>
+              <input class="form-input" type="text" placeholder="1234 5678 9012 3456" maxlength="19"
+                oninput="formatCard(this)" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Expiry Date</label>
+              <input class="form-input" type="text" placeholder="MM / YY" maxlength="7" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">CVV</label>
+              <input class="form-input" type="text" placeholder="123" maxlength="4" />
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Name on Card</label>
+              <input class="form-input" type="text" placeholder="Jamie Smith" value="Jamie Smith" />
+            </div>
+          </div>
+        </div>
+
+        <div class="card-fields pay-method-info" id="paypal-fields">
+          🅿️ You'll be redirected to PayPal to complete payment securely.
+        </div>
+        <div class="card-fields pay-method-info" id="apple-fields">
+          🍎 Use Touch ID or Face ID to pay with Apple Pay.
+        </div>
+        <div class="card-fields pay-method-info" id="google-fields">
+          🔵 Use your Google account to pay instantly.
+        </div>
+      </div>
+
+      <div class="checkout-actions">
+        <a href="cart.html" class="btn btn-white">← Back to Cart</a>
+        <button class="btn btn-green btn-place-order" onclick="placeOrder()">Place Order 🎉</button>
+      </div>
+    </div>
+
+    <!-- SUMMARY SIDEBAR -->
+    <aside class="summary-sidebar">
+      <div class="summary-card">
+        <h2 class="summary-title">🧾 Your Order</h2>
+        <div class="summary-items">
+          <div class="summary-item">
+            <span class="si-emoji">🍩</span>
+            <div class="si-info">
+              <div class="si-name">Classic Glazed</div>
+              <div class="si-opts">Regular · Classic</div>
+            </div>
+            <span class="si-qty">×2</span>
+            <span class="si-price">$5.00</span>
+          </div>
+          <div class="summary-item">
+            <span class="si-emoji">🍫</span>
+            <div class="si-info">
+              <div class="si-name">Double Choco</div>
+              <div class="si-opts">Jumbo · Extra Sweet</div>
+            </div>
+            <span class="si-qty">×1</span>
+            <span class="si-price">$3.00</span>
+          </div>
+          <div class="summary-item">
+            <span class="si-emoji">🍓</span>
+            <div class="si-info">
+              <div class="si-name">Strawberry Dream</div>
+              <div class="si-opts">Regular · Classic</div>
+            </div>
+            <span class="si-qty">×1</span>
+            <span class="si-price">$3.25</span>
+          </div>
+        </div>
+        <div class="summary-row"><span class="label">Subtotal</span><span>$11.25</span></div>
+        <div class="summary-row"><span class="label text-green">🎟️ Discount</span><span
+            class="text-green">-$0.00</span></div>
+        <div class="summary-row"><span class="label">🚚 Delivery</span><span class="text-green-bold">FREE</span></div>
+        <div class="summary-row"><span class="label">🧂 Tax (8%)</span><span>$0.90</span></div>
+        <div class="summary-row total"><span class="label">Total</span><span class="summary-total-price">$12.15</span>
+        </div>
+
+        <div class="secure-badge">
+          <span class="secure-badge-icon">🔒</span>
+          <span class="secure-badge-text">Your payment is 100% secure. SSL encrypted.</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- SUCCESS OVERLAY -->
+  <div class="success-overlay" id="successOverlay">
+    <div class="success-card">
+      <span class="success-emoji">🎉</span>
+      <h2 class="success-title">Order Placed!</h2>
+      <div class="order-num">Order #DOU-20240316</div>
+      <p class="success-desc">Your donuts are being lovingly prepared and will arrive at your door in 30 minutes! Keep
+        an eye on your email for updates 🍩</p>
+      <div class="success-actions">
+        <a href="account.html" class="btn btn-pink">Track Order 🛵</a>
+        <a href="shop.html" class="btn btn-white">Order More! 🍩</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">🍩 <span>Doughy</span></div>
+        <div class="footer-desc">The happiest donut shop in the universe. Made with love, glazed with joy, delivered
+          with a smile since 2020.</div>
+      </div>
+      <div>
+        <div class="footer-heading">Shop</div>
+        <ul class="footer-links">
+          <li><a href="shop.html">All Donuts</a></li>
+          <li><a href="shop.html">Classic Glazed</a></li>
+          <li><a href="shop.html">Specialty</a></li>
+          <li><a href="shop.html">Boxes &amp; Bundles</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Help</div>
+        <ul class="footer-links">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="delivery.html">Delivery Info</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+          <li><a href="account.html">My Account</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+          <li><a href="#">Careers 🍩</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Doughy. All rights reserved. Made with 🍩 and love.</p>
+      <p>© Atia Hegazy — atiaeno.com</p>
+    </div>
+  </footer>
+
+  <script>
+    function openMobileNav() {
+      document.getElementById('mobileNav').classList.add('open');
+      document.querySelector('.hamburger').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('open');
+      document.querySelector('.hamburger').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function selectDelivery(el) {
+      document.querySelectorAll('.delivery-option').forEach(o => o.classList.remove('selected'));
+      el.classList.add('selected');
+    }
+
+    function selectPayment(el, type) {
+      document.querySelectorAll('.pay-method').forEach(m => m.classList.remove('selected'));
+      el.classList.add('selected');
+      document.querySelectorAll('.card-fields').forEach(f => f.classList.remove('active'));
+      document.getElementById(type + '-fields').classList.add('active');
+    }
+
+    function formatCard(input) {
+      let v = input.value.replace(/\D/g, '').substring(0, 16);
+      input.value = v.replace(/(.{4})/g, '$1 ').trim();
+    }
+
+    function placeOrder() {
+      document.getElementById('successOverlay').classList.add('show');
+      spawnConfetti();
+    }
+
+    function spawnConfetti() {
+      const colors = ['#FF6B9D', '#FFD93D', '#6BCB77', '#4D96FF', '#FF6348'];
+      for (let i = 0; i < 60; i++) {
+        setTimeout(() => {
+          const el = document.createElement('div');
+          el.className = 'confetti-piece';
+          el.style.cssText = `left:${Math.random() * 100}vw;background:${colors[Math.floor(Math.random() * colors.length)]};animation-duration:${1.2 + Math.random() * 1.5}s;animation-delay:${Math.random() * 0.5}s;`;
+          document.body.appendChild(el);
+          setTimeout(() => el.remove(), 2500);
+        }, i * 30);
+      }
+    }
+  </script>
+
+  <!-- COOKIE CONSENT BAR -->
+  <div class="cookie-bar" id="cookieBar">
+    <div class="cookie-bar-content">
+      <span class="cookie-bar-emoji">🍪</span>
+      <div class="cookie-bar-text">We use cookies to make your experience sweeter! By continuing, you agree to our <a
+          href="cookies.html">Cookie Policy</a>.</div>
+    </div>
+    <div class="cookie-bar-actions">
+      <button class="cookie-btn cookie-btn--accept" onclick="acceptCookies()">Accept All</button>
+      <button class="cookie-btn cookie-btn--settings" onclick="window.location.href='cookies.html'">Settings</button>
+    </div>
+  </div>
+  <script>
+    if (!localStorage.getItem('doughy_consent')) {
+      setTimeout(function () { document.getElementById('cookieBar').classList.add('show'); }, 1500);
+    }
+    function acceptCookies() {
+      localStorage.setItem('doughy_consent', 'accepted');
+      document.getElementById('cookieBar').classList.remove('show');
+    }
+  </script>
+</body>
+
+</html>

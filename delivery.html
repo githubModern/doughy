@@ -1,0 +1,284 @@
+<!-- © Atia Hegazy — atiaeno.com -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delivery Info — Doughy 🍩</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">🍩 <span>Doughy</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="product.html">Flavors</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-white btn-sm">👤 Login</a>
+      <a href="register.html" class="btn btn-yellow btn-sm">✨ Register</a>
+      <a href="cart.html" class="btn btn-pink cart-btn btn-sm">🛒 Cart <span class="cart-badge">3</span></a>
+    </div>
+    <button class="hamburger" onclick="openMobileNav()"
+      aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-overlay" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-drawer">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="mobile-nav-logo">🍩 <span>Doughy</span></a>
+        <div class="mobile-close" onclick="closeMobileNav()">✕</div>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html">🏠 Home</a>
+        <a href="shop.html">🍩 Shop</a>
+        <a href="product.html">✨ Flavors</a>
+      </div>
+      <div class="mobile-nav-actions">
+        <a href="login.html" class="btn btn-white">👤 Login</a>
+        <a href="register.html" class="btn btn-yellow">✨ Register</a>
+        <a href="cart.html" class="btn btn-pink cart-btn">🛒 Cart <span class="cart-badge">3</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-hero">
+    <span class="info-hero-emoji">🚚</span>
+    <span class="info-hero-badge">⚡ Fast &amp; Fresh</span>
+    <h1>Delivery <span class="text-pink">Info</span></h1>
+    <p>Warm donuts delivered to your door — fast, fresh, and with a smile. Here's how it works.</p>
+  </div>
+
+  <div class="info-page">
+
+    <!-- HOW IT WORKS TIMELINE -->
+    <div class="info-content">
+      <h2>🚀 How Delivery Works</h2>
+    </div>
+
+    <div class="delivery-timeline">
+      <div class="timeline-step">
+        <div class="timeline-dot timeline-dot--pink">🛒</div>
+        <div>
+          <h4>Place Order</h4>
+          <p>Pick your donuts &amp; checkout</p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-dot timeline-dot--yellow">👨‍🍳</div>
+        <div>
+          <h4>We Bake</h4>
+          <p>Fresh-made just for you</p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-dot timeline-dot--green">📦</div>
+        <div>
+          <h4>We Pack</h4>
+          <p>Carefully boxed &amp; sealed</p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-dot timeline-dot--blue">🏠</div>
+        <div>
+          <h4>You Enjoy!</h4>
+          <p>Warm donuts at your door</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DELIVERY HIGHLIGHTS -->
+    <div class="info-cards">
+      <div class="info-card info-card--pink">
+        <span class="info-card-emoji">⚡</span>
+        <h3>30-Min Express</h3>
+        <p>Lightning-fast delivery within our core zone. Your donuts arrive warm!</p>
+      </div>
+      <div class="info-card info-card--green">
+        <span class="info-card-emoji">🆓</span>
+        <h3>Free Over $25</h3>
+        <p>Orders above $25 get free delivery. Treat yourself (and a friend)!</p>
+      </div>
+      <div class="info-card info-card--yellow">
+        <span class="info-card-emoji">📅</span>
+        <h3>Schedule Ahead</h3>
+        <p>Plan deliveries up to 7 days in advance. Perfect for events!</p>
+      </div>
+      <div class="info-card info-card--blue">
+        <span class="info-card-emoji">📍</span>
+        <h3>Real-Time Tracking</h3>
+        <p>Track your driver live from bakery to your doorstep.</p>
+      </div>
+    </div>
+
+    <!-- DELIVERY ZONES TABLE -->
+    <div class="info-content">
+      <h2>📍 Delivery Zones &amp; Fees</h2>
+      <p>We deliver based on distance from our bakery. Here's the breakdown:</p>
+    </div>
+
+    <div class="info-table-wrap">
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Zone</th>
+            <th>Distance</th>
+            <th>Est. Time</th>
+            <th>Fee</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>🟢 Core Zone</strong></td>
+            <td>0 – 5 miles</td>
+            <td>30 min</td>
+            <td><span class="badge-free">FREE</span></td>
+          </tr>
+          <tr>
+            <td><strong>🟡 Extended</strong></td>
+            <td>5 – 10 miles</td>
+            <td>45 min</td>
+            <td><span class="badge-fee">$2.99</span></td>
+          </tr>
+          <tr>
+            <td><strong>🟠 Outer</strong></td>
+            <td>10 – 15 miles</td>
+            <td>60 min</td>
+            <td><span class="badge-fee">$4.99</span></td>
+          </tr>
+          <tr>
+            <td><strong>🔴 Special</strong></td>
+            <td>15+ miles</td>
+            <td>Contact us</td>
+            <td><span class="badge-fee">Custom</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-highlight">
+      <h3>💡 Pro Tip</h3>
+      <p>Orders over <strong>$25</strong> always ship free within Core and Extended zones! Add one more donut to hit the
+        threshold — you won't regret it.</p>
+    </div>
+
+    <!-- DELIVERY HOURS -->
+    <div class="info-content">
+      <h2>🕐 Delivery Hours</h2>
+      <p>We deliver during the following hours:</p>
+      <ul>
+        <li><strong>Monday – Friday:</strong> 7:00 AM – 9:00 PM</li>
+        <li><strong>Saturday:</strong> 8:00 AM – 10:00 PM</li>
+        <li><strong>Sunday:</strong> 8:00 AM – 8:00 PM</li>
+        <li><strong>Holidays:</strong> Limited hours (check our socials for updates)</li>
+      </ul>
+      <p>Orders placed outside these hours will be scheduled for the next available delivery window.</p>
+    </div>
+
+    <!-- PACKAGING -->
+    <div class="info-content">
+      <h2>📦 Our Packaging Promise</h2>
+      <p>Every order is packed with care to ensure your donuts arrive in perfect condition:</p>
+      <ul>
+        <li><strong>Insulated boxes</strong> to keep donuts warm for up to 30 minutes</li>
+        <li><strong>Eco-friendly materials</strong> — 100% recyclable packaging</li>
+        <li><strong>Tamper-proof seals</strong> so you know your donuts are safe</li>
+        <li><strong>Individual slots</strong> to prevent squishing or sliding</li>
+      </ul>
+    </div>
+
+    <div class="info-cta">
+      <h2>Ready to Order? 🍩</h2>
+      <p>Fresh donuts are just a few clicks away!</p>
+      <a href="shop.html">Start Shopping</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">🍩 <span>Doughy</span></div>
+        <div class="footer-desc">The happiest donut shop in the universe. Made with love, glazed with joy, delivered
+          with a smile since 2020.</div>
+      </div>
+      <div>
+        <div class="footer-heading">Shop</div>
+        <ul class="footer-links">
+          <li><a href="shop.html">All Donuts</a></li>
+          <li><a href="shop.html">Classic Glazed</a></li>
+          <li><a href="shop.html">Specialty</a></li>
+          <li><a href="shop.html">Boxes &amp; Bundles</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Help</div>
+        <ul class="footer-links">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="delivery.html">Delivery Info</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+          <li><a href="account.html">My Account</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+          <li><a href="#">Careers 🍩</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Doughy. All rights reserved. Made with 🍩 and love.</p>
+      <p>&copy; Atia Hegazy — atiaeno.com</p>
+    </div>
+  </footer>
+
+  <script>
+    function openMobileNav() {
+      document.getElementById('mobileNav').classList.add('open');
+      document.querySelector('.hamburger').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('open');
+      document.querySelector('.hamburger').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+  <!-- COOKIE CONSENT BAR -->
+  <div class="cookie-bar" id="cookieBar">
+    <div class="cookie-bar-content">
+      <span class="cookie-bar-emoji">🍪</span>
+      <div class="cookie-bar-text">We use cookies to make your experience sweeter! By continuing, you agree to our <a
+          href="cookies.html">Cookie Policy</a>.</div>
+    </div>
+    <div class="cookie-bar-actions">
+      <button class="cookie-btn cookie-btn--accept" onclick="acceptCookies()">Accept All</button>
+      <button class="cookie-btn cookie-btn--settings" onclick="window.location.href='cookies.html'">Settings</button>
+    </div>
+  </div>
+  <script>
+    if (!localStorage.getItem('doughy_consent')) {
+      setTimeout(function () { document.getElementById('cookieBar').classList.add('show'); }, 1500);
+    }
+    function acceptCookies() {
+      localStorage.setItem('doughy_consent', 'accepted');
+      document.getElementById('cookieBar').classList.remove('show');
+    }
+  </script>
+</body>
+
+</html>

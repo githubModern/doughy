@@ -1,0 +1,284 @@
+<!-- © Atia Hegazy — atiaeno.com -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookie Policy — Doughy 🍩</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">🍩 <span>Doughy</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="product.html">Flavors</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-white btn-sm">👤 Login</a>
+      <a href="register.html" class="btn btn-yellow btn-sm">✨ Register</a>
+      <a href="cart.html" class="btn btn-pink cart-btn btn-sm">🛒 Cart <span class="cart-badge">3</span></a>
+    </div>
+    <button class="hamburger" onclick="openMobileNav()"
+      aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-overlay" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-drawer">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="mobile-nav-logo">🍩 <span>Doughy</span></a>
+        <div class="mobile-close" onclick="closeMobileNav()">✕</div>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html">🏠 Home</a>
+        <a href="shop.html">🍩 Shop</a>
+        <a href="product.html">✨ Flavors</a>
+      </div>
+      <div class="mobile-nav-actions">
+        <a href="login.html" class="btn btn-white">👤 Login</a>
+        <a href="register.html" class="btn btn-yellow">✨ Register</a>
+        <a href="cart.html" class="btn btn-pink cart-btn">🛒 Cart <span class="cart-badge">3</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-hero">
+    <span class="info-hero-emoji">🍪</span>
+    <span class="info-hero-badge">Not the edible kind!</span>
+    <h1>Cookie <span class="text-pink">Policy</span></h1>
+    <p>Yes, we love cookies — but these are the digital kind. Here's how we use them on our website.</p>
+  </div>
+
+  <div class="info-page">
+
+    <div class="info-highlight">
+      <h3>🍪 TL;DR</h3>
+      <p>We use cookies to make your experience sweeter — remembering your cart, preferences, and helping us improve.
+        You can manage your preferences anytime.</p>
+    </div>
+
+    <div class="info-content">
+      <h2>🍪 What Are Cookies?</h2>
+      <p>Cookies are small text files that are stored on your device when you visit a website. They help the site
+        remember your actions and preferences (like login details, language, and display preferences) over a period of
+        time, so you don't have to re-enter them whenever you come back.</p>
+      <p>Despite sharing a name with our delicious baked goods, these cookies are purely digital — no sprinkles
+        involved.</p>
+    </div>
+
+    <div class="info-content">
+      <h2>📋 Types of Cookies We Use</h2>
+
+      <h3>🔒 Essential Cookies</h3>
+      <p>These are required for the website to function properly. They enable core features like:</p>
+      <ul>
+        <li>Shopping cart functionality</li>
+        <li>Secure checkout process</li>
+        <li>Account authentication</li>
+        <li>Security and fraud prevention</li>
+      </ul>
+      <p><strong>Can you disable these?</strong> No — they're necessary for the site to work.</p>
+
+      <h3>📊 Analytics Cookies</h3>
+      <p>These help us understand how visitors use our website so we can improve it:</p>
+      <ul>
+        <li>Which pages are most popular</li>
+        <li>How visitors navigate through the site</li>
+        <li>Where errors occur</li>
+        <li>Time spent on pages</li>
+      </ul>
+      <p>All analytics data is anonymized. We use Google Analytics with IP anonymization enabled.</p>
+
+      <h3>🎯 Functional Cookies</h3>
+      <p>These remember your choices and provide enhanced, personalized features:</p>
+      <ul>
+        <li>Your flavor preferences and saved favorites</li>
+        <li>Recently viewed products</li>
+        <li>Language and region settings</li>
+        <li>Display preferences (dark mode, etc.)</li>
+      </ul>
+
+      <h3>📣 Marketing Cookies</h3>
+      <p>These are used to deliver relevant advertisements and track campaign effectiveness:</p>
+      <ul>
+        <li>Showing you donuts you've browsed on other sites</li>
+        <li>Measuring ad click-through rates</li>
+        <li>Limiting how often you see the same ad</li>
+      </ul>
+      <p>These are <strong>only set with your consent</strong> and can be disabled at any time.</p>
+    </div>
+
+    <!-- COOKIES TABLE -->
+    <div class="info-content">
+      <h2>📝 Cookie Details</h2>
+    </div>
+
+    <div class="info-table-wrap">
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Cookie Name</th>
+            <th>Type</th>
+            <th>Duration</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>doughy_session</strong></td>
+            <td>Essential</td>
+            <td>Session</td>
+            <td>Maintains your shopping session</td>
+          </tr>
+          <tr>
+            <td><strong>doughy_cart</strong></td>
+            <td>Essential</td>
+            <td>30 days</td>
+            <td>Remembers cart contents</td>
+          </tr>
+          <tr>
+            <td><strong>doughy_auth</strong></td>
+            <td>Essential</td>
+            <td>7 days</td>
+            <td>Keeps you logged in</td>
+          </tr>
+          <tr>
+            <td><strong>doughy_prefs</strong></td>
+            <td>Functional</td>
+            <td>1 year</td>
+            <td>Stores your display preferences</td>
+          </tr>
+          <tr>
+            <td><strong>_ga / _gid</strong></td>
+            <td>Analytics</td>
+            <td>2 years / 24h</td>
+            <td>Google Analytics tracking</td>
+          </tr>
+          <tr>
+            <td><strong>doughy_consent</strong></td>
+            <td>Essential</td>
+            <td>1 year</td>
+            <td>Remembers your cookie preferences</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-content">
+      <h2>⚙️ Managing Your Cookies</h2>
+      <p>You have full control over cookies. Here's how to manage them:</p>
+      <ul>
+        <li><strong>Browser settings:</strong> Most browsers let you block or delete cookies via settings. Check your
+          browser's help section for instructions.</li>
+        <li><strong>Our cookie banner:</strong> When you first visit, you can accept all cookies or choose which
+          categories to enable.</li>
+        <li><strong>Opt out of analytics:</strong> Install the <a href="https://tools.google.com/dlpage/gaoptout"
+            target="_blank">Google Analytics Opt-out Browser Add-on</a>.</li>
+      </ul>
+      <p><strong>Note:</strong> Disabling certain cookies may affect website functionality (e.g., your cart might not
+        save between visits).</p>
+    </div>
+
+    <div class="info-content">
+      <h2>🔄 Updates to This Policy</h2>
+      <p>We may update this Cookie Policy from time to time. When we do, we'll update the date below and notify you via
+        a banner if the changes are significant.</p>
+    </div>
+
+    <div class="info-updated">Last updated: April 16, 2026</div>
+
+    <div class="info-cta">
+      <h2>Questions About Cookies? 🍪</h2>
+      <p>Not sure about something? We're happy to explain — no jargon, promise!</p>
+      <a href="mailto:privacy@doughy.com">📧 Contact Privacy Team</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">🍩 <span>Doughy</span></div>
+        <div class="footer-desc">The happiest donut shop in the universe. Made with love, glazed with joy, delivered
+          with a smile since 2020.</div>
+      </div>
+      <div>
+        <div class="footer-heading">Shop</div>
+        <ul class="footer-links">
+          <li><a href="shop.html">All Donuts</a></li>
+          <li><a href="shop.html">Classic Glazed</a></li>
+          <li><a href="shop.html">Specialty</a></li>
+          <li><a href="shop.html">Boxes &amp; Bundles</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Help</div>
+        <ul class="footer-links">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="delivery.html">Delivery Info</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+          <li><a href="account.html">My Account</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+          <li><a href="#">Careers 🍩</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Doughy. All rights reserved. Made with 🍩 and love.</p>
+      <p>&copy; Atia Hegazy — atiaeno.com</p>
+    </div>
+  </footer>
+
+  <script>
+    function openMobileNav() {
+      document.getElementById('mobileNav').classList.add('open');
+      document.querySelector('.hamburger').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('open');
+      document.querySelector('.hamburger').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+  <!-- COOKIE CONSENT BAR -->
+  <div class="cookie-bar" id="cookieBar">
+    <div class="cookie-bar-content">
+      <span class="cookie-bar-emoji">🍪</span>
+      <div class="cookie-bar-text">We use cookies to make your experience sweeter! By continuing, you agree to our <a
+          href="cookies.html">Cookie Policy</a>.</div>
+    </div>
+    <div class="cookie-bar-actions">
+      <button class="cookie-btn cookie-btn--accept" onclick="acceptCookies()">Accept All</button>
+      <button class="cookie-btn cookie-btn--settings" onclick="window.location.href='cookies.html'">Settings</button>
+    </div>
+  </div>
+  <script>
+    if (!localStorage.getItem('doughy_consent')) {
+      setTimeout(function () { document.getElementById('cookieBar').classList.add('show'); }, 1500);
+    }
+    function acceptCookies() {
+      localStorage.setItem('doughy_consent', 'accepted');
+      document.getElementById('cookieBar').classList.remove('show');
+    }
+  </script>
+</body>
+
+</html>

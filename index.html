@@ -1,0 +1,384 @@
+<!-- © Atia Hegazy — atiaeno.com -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doughy — The Happiest Donut Shop 🍩</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">🍩 <span>Doughy</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="product.html">Flavors</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-white btn-sm">👤 Login</a>
+      <a href="register.html" class="btn btn-yellow btn-sm">✨ Register</a>
+      <a href="cart.html" class="btn btn-pink cart-btn btn-sm">🛒 Cart <span class="cart-badge">3</span></a>
+    </div>
+    <button class="hamburger" onclick="openMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-overlay" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-drawer">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="mobile-nav-logo">🍩 <span>Doughy</span></a>
+        <div class="mobile-close" onclick="closeMobileNav()">✕</div>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html" class="active">🏠 Home</a>
+        <a href="shop.html">🍩 Shop</a>
+        <a href="product.html">✨ Flavors</a>
+      </div>
+      <div class="mobile-nav-actions">
+        <a href="login.html" class="btn btn-white">👤 Login</a>
+        <a href="register.html" class="btn btn-yellow">✨ Register</a>
+        <a href="cart.html" class="btn btn-pink cart-btn">🛒 Cart <span class="cart-badge">3</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="floating-donut fd1">🍩</div>
+    <div class="floating-donut fd2">⭐</div>
+    <div class="floating-donut fd3">🌟</div>
+    <div class="floating-donut fd4">🍩</div>
+    <div class="floating-donut fd5">✨</div>
+
+    <div class="hero-content">
+      <div class="hero-tag">🎉 Fresh Baked Daily!</div>
+      <h1>The <span class="accent-pink">Fluffiest</span><br />Donuts in<br />the <span
+          class="accent-blue">Universe</span></h1>
+      <p>Handcrafted with love, glazed with happiness, and sprinkled with pure joy. Order now and get them delivered hot
+        to your door! 🚀</p>
+      <div class="hero-btns">
+        <a href="shop.html" class="btn btn-pink">🍩 Order Now!</a>
+        <a href="shop.html" class="btn btn-yellow">✨ See All Flavors</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-blob1"></div>
+      <div class="hero-blob2"></div>
+      <div class="donut-big">🍩</div>
+    </div>
+  </section>
+
+  <!-- MARQUEE 
+  <div class="marquee-wrap">
+    <div class="marquee-inner">
+      <span>🍩 Classic Glazed</span><span>•</span>
+      <span>🌈 Rainbow Sprinkles</span><span>•</span>
+      <span>🍫 Double Chocolate</span><span>•</span>
+      <span>🍓 Strawberry Dream</span><span>•</span>
+      <span>🥜 Peanut Butter Bliss</span><span>•</span>
+      <span>☕ Coffee Crunch</span><span>•</span>
+      <span>🍩 Classic Glazed</span><span>•</span>
+      <span>🌈 Rainbow Sprinkles</span><span>•</span>
+      <span>🍫 Double Chocolate</span><span>•</span>
+      <span>🍓 Strawberry Dream</span><span>•</span>
+      <span>🥜 Peanut Butter Bliss</span><span>•</span>
+      <span>☕ Coffee Crunch</span><span>•</span>
+    </div>
+  </div>-->
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-num">50K+</div>
+      <div class="stat-label">Happy Customers</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">24</div>
+      <div class="stat-label">Flavors</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Fresh Daily</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">4.9★</div>
+      <div class="stat-label">Average Rating</div>
+    </div>
+  </div>
+
+  <!-- WAVE -->
+  <div class="wave-divider"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" height="60" fill="#FFF9E0"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 C360,60 1080,60 1440,0 L1440,60 L0,60 Z" />
+    </svg></div>
+
+  <!-- FEATURED DONUTS -->
+  <section class="section section-yellow">
+    <div class="blob blob--pink-10-featured"></div>
+    <div class="blob blob--blue-10"></div>
+    <h2 class="section-title">Fan <span class="text-pink">Favorites</span> 🏆</h2>
+    <p class="section-sub">Our most-loved donuts — picked by thousands of happy fans!</p>
+    <div class="cards-grid">
+      <a href="product.html" class="product-card">
+        <span class="product-tag tag-fav">❤️ Fan Fav</span>
+        <span class="product-emoji">🍩</span>
+        <div class="product-name">Classic Glazed</div>
+        <div class="product-desc">Golden, fluffy, perfectly glazed. The OG that started it all.</div>
+        <div class="product-footer">
+          <span class="product-price">$2.50</span>
+          <button class="add-btn" onclick="event.preventDefault();addToCart(this)">+ Add</button>
+        </div>
+      </a>
+      <a href="product.html" class="product-card">
+        <span class="product-tag tag-hot">🔥 Hot Pick</span>
+        <span class="product-emoji">🍫</span>
+        <div class="product-name">Double Choco</div>
+        <div class="product-desc">Rich chocolate dough + chocolate glaze = pure heaven on earth.</div>
+        <div class="product-footer">
+          <span class="product-price">$3.00</span>
+          <button class="add-btn add-btn--orange" onclick="event.preventDefault();addToCart(this)">+
+            Add</button>
+        </div>
+      </a>
+      <a href="product.html" class="product-card">
+        <span class="product-tag tag-new">✨ New!</span>
+        <span class="product-emoji">🍓</span>
+        <div class="product-name">Strawberry Dream</div>
+        <div class="product-desc">Fresh strawberry glaze with rainbow sprinkles. Dreamy!</div>
+        <div class="product-footer">
+          <span class="product-price">$3.25</span>
+          <button class="add-btn add-btn--blue" onclick="event.preventDefault();addToCart(this)">+
+            Add</button>
+        </div>
+      </a>
+      <a href="product.html" class="product-card">
+        <span class="product-tag tag-fav">⭐ Top Rated</span>
+        <span class="product-emoji">🥜</span>
+        <div class="product-name">PB Bliss</div>
+        <div class="product-desc">Peanut butter filling with a crunchy honey-glaze topping.</div>
+        <div class="product-footer">
+          <span class="product-price">$3.50</span>
+          <button class="add-btn add-btn--green" onclick="event.preventDefault();addToCart(this)">+
+            Add</button>
+        </div>
+      </a>
+    </div>
+    <div class="text-center mt-48">
+      <a href="shop.html" class="btn btn-pink">See All 24 Flavors 🍩</a>
+    </div>
+  </section>
+
+  <!-- WAVE -->
+  <div class="wave-divider"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" height="60" fill="#FFF0F7"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,60 C360,0 1080,0 1440,60 L1440,60 L0,60 Z" />
+    </svg></div>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section-pink">
+    <div class="blob blob--yellow-20"></div>
+    <div class="blob blob--green-20">
+    </div>
+    <h2 class="section-title">How It <span class="text-blue">Works</span> 🚀</h2>
+    <p class="section-sub">Getting your donuts is as easy as 1-2-3!</p>
+    <div class="steps-row">
+      <div class="step-card">
+        <div class="step-num step-num--pink">01</div>
+        <div class="step-icon">🍩</div>
+        <div class="step-title">Pick Your Donuts</div>
+        <div class="step-desc">Browse 24 amazing flavors and add your favorites to the cart.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num step-num--blue">02</div>
+        <div class="step-icon">💳</div>
+        <div class="step-title">Place Your Order</div>
+        <div class="step-desc">Quick & secure checkout. Multiple payment methods accepted!</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num step-num--green">03</div>
+        <div class="step-icon">🚀</div>
+        <div class="step-title">Enjoy Delivery</div>
+        <div class="step-desc">Fresh, warm donuts delivered to your door in 30 minutes flat!</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num step-num--yellow">04</div>
+        <div class="step-icon">😍</div>
+        <div class="step-title">Share the Joy</div>
+        <div class="step-desc">Tag us! Show off your donuts and spread the happiness!</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE -->
+  <div class="wave-divider"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" height="60" fill="#F0F7FF"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 C360,60 1080,60 1440,0 L1440,60 L0,60 Z" />
+    </svg></div>
+
+  <!-- TESTIMONIALS -->
+  <section class="section section-blue">
+    <div class="blob blob--pink-10-testimonial"></div>
+    <div class="blob blob--yellow-15"></div>
+    <h2 class="section-title">What Fans <span class="text-pink">Say</span> 💬</h2>
+    <p class="section-sub">Real donut lovers. Real happiness. Real calories. No regrets.</p>
+    <div class="reviews-row">
+      <div class="review-card">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <div class="review-text">"I dreamt of these donuts for a week after my first order. Now I have a standing
+          Saturday morning delivery. My life is complete."</div>
+        <div class="review-author">
+          <div class="review-avatar">😊</div>
+          <div>
+            <div class="review-name">Sarah M.</div>
+            <div class="review-handle">@sarahlovesdonuts</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <div class="review-text">"The Double Choco changed my entire perspective on dessert. I've ordered it 14 times in
+          3 weeks. No shame whatsoever."</div>
+        <div class="review-author">
+          <div class="review-avatar review-av--blue">😎</div>
+          <div>
+            <div class="review-name">Jake T.</div>
+            <div class="review-handle">@donutfiend99</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <div class="review-text">"Ordered for the office party. 30 donuts gone in 4 minutes. I was hailed as a hero.
+          Doughy saved my professional reputation."</div>
+        <div class="review-author">
+          <div class="review-avatar review-av--green">🎉</div>
+          <div>
+            <div class="review-name">Priya K.</div>
+            <div class="review-handle">@officehero</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE -->
+  <div class="wave-divider"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" height="60" fill="#FF6B9D"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,60 C360,0 1080,0 1440,60 L1440,60 L0,60 Z" />
+    </svg></div>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <div class="cta-blob1"></div>
+    <div class="cta-blob2"></div>
+    <h2>Hungry Yet? 🍩</h2>
+    <p>Get 10% off your first order with code <strong>YUMMY10</strong></p>
+    <a href="shop.html" class="btn btn-yellow btn-cta">Start Ordering! 🎉</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">🍩 <span>Doughy</span></div>
+        <div class="footer-desc">The happiest donut shop in the universe. Made with love, glazed with joy, delivered
+          with a smile since 2020.</div>
+      </div>
+      <div>
+        <div class="footer-heading">Shop</div>
+        <ul class="footer-links">
+          <li><a href="shop.html">All Donuts</a></li>
+          <li><a href="shop.html">Classic Glazed</a></li>
+          <li><a href="shop.html">Specialty</a></li>
+          <li><a href="shop.html">Boxes & Bundles</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Help</div>
+        <ul class="footer-links">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="delivery.html">Delivery Info</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+          <li><a href="account.html">My Account</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+          <li><a href="#">Careers 🍩</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Doughy. All rights reserved. Made with 🍩 and love.</p>
+      <p>© Atia Hegazy — atiaeno.com</p>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast">
+    🍩 Added to cart!
+  </div>
+
+  <script>
+    function openMobileNav() {
+      const nav = document.getElementById('mobileNav');
+      nav.classList.add('open');
+      document.querySelector('.hamburger').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+      const nav = document.getElementById('mobileNav');
+      nav.classList.remove('open');
+      document.querySelector('.hamburger').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function addToCart(btn) {
+      btn.classList.add('wiggle');
+      setTimeout(() => btn.classList.remove('wiggle'), 500);
+      const toast = document.getElementById('toast');
+      toast.style.transform = 'translateY(0)';
+      setTimeout(() => { toast.style.transform = 'translateY(120px)'; }, 2200);
+    }
+  </script>
+
+  <!-- COOKIE CONSENT BAR -->
+  <div class="cookie-bar" id="cookieBar">
+    <div class="cookie-bar-content">
+      <span class="cookie-bar-emoji">🍪</span>
+      <div class="cookie-bar-text">We use cookies to make your experience sweeter! By continuing, you agree to our <a
+          href="cookies.html">Cookie Policy</a>.</div>
+    </div>
+    <div class="cookie-bar-actions">
+      <button class="cookie-btn cookie-btn--accept" onclick="acceptCookies()">Accept All</button>
+      <button class="cookie-btn cookie-btn--settings" onclick="window.location.href='cookies.html'">Settings</button>
+    </div>
+  </div>
+  <script>
+    if (!localStorage.getItem('doughy_consent')) {
+      setTimeout(function () { document.getElementById('cookieBar').classList.add('show'); }, 1500);
+    }
+    function acceptCookies() {
+      localStorage.setItem('doughy_consent', 'accepted');
+      document.getElementById('cookieBar').classList.remove('show');
+    }
+  </script>
+</body>
+
+</html>

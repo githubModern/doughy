@@ -1,0 +1,340 @@
+<!-- © Atia Hegazy — atiaeno.com -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — Doughy 🍩</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">🍩 <span>Doughy</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="product.html">Flavors</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-white btn-sm">👤 Login</a>
+      <a href="register.html" class="btn btn-yellow btn-sm">✨ Register</a>
+      <a href="cart.html" class="btn btn-pink cart-btn btn-sm">🛒 Cart <span class="cart-badge">3</span></a>
+    </div>
+    <button class="hamburger" onclick="openMobileNav()"
+      aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-overlay" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-drawer">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="mobile-nav-logo">🍩 <span>Doughy</span></a>
+        <div class="mobile-close" onclick="closeMobileNav()">✕</div>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html">🏠 Home</a>
+        <a href="shop.html" class="active">🍩 Shop</a>
+        <a href="product.html">✨ Flavors</a>
+      </div>
+      <div class="mobile-nav-actions">
+        <a href="login.html" class="btn btn-white">👤 Login</a>
+        <a href="register.html" class="btn btn-yellow">✨ Register</a>
+        <a href="cart.html" class="btn btn-pink cart-btn">🛒 Cart <span class="cart-badge">3</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <div class="ph-blob1"></div>
+    <div class="ph-blob2"></div>
+    <h1>🍩 Our <span class="text-pink">Donut</span> Menu</h1>
+    <p>24 flavors of pure happiness. Pick your favorites!</p>
+  </div>
+
+  <div class="shop-layout">
+    <!-- SIDEBAR -->
+    <aside class="shop-sidebar">
+      <div class="filter-card">
+        <div class="filter-title">🔍 Search</div>
+        <input type="text" class="search-box" placeholder="Find a flavor..." oninput="filterDonuts()"
+          id="searchInput" />
+      </div>
+
+      <div class="filter-card">
+        <div class="filter-title">🏷️ Categories</div>
+        <div class="filter-group">
+          <div class="filter-chips-wrap">
+            <span class="filter-chip active" onclick="toggleFilter(this,'all')">All 🍩</span>
+            <span class="filter-chip cat-classic" onclick="toggleFilter(this,'classic')">Classic</span>
+            <span class="filter-chip cat-choc" onclick="toggleFilter(this,'chocolate')">Chocolate 🍫</span>
+            <span class="filter-chip cat-fruit" onclick="toggleFilter(this,'fruit')">Fruity 🍓</span>
+            <span class="filter-chip cat-special" onclick="toggleFilter(this,'special')">Special ✨</span>
+            <span class="filter-chip cat-vegan" onclick="toggleFilter(this,'vegan')">Vegan 🌱</span>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-group-title">Sort by</div>
+          <select class="sort-select sort-select--full" onchange="sortDonuts(this.value)">
+            <option value="popular">⭐ Most Popular</option>
+            <option value="price-low">💰 Price: Low to High</option>
+            <option value="price-high">💎 Price: High to Low</option>
+            <option value="newest">✨ Newest First</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-group-title">Max Price: $<span id="priceVal">6</span></div>
+          <input type="range" class="price-range" min="1" max="10" value="6" step="0.5"
+            oninput="document.getElementById('priceVal').textContent=this.value; filterDonuts();" />
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="shop-main">
+      <div class="shop-topbar">
+        <div class="results-count">Showing <strong id="resultCount">12</strong> donuts</div>
+      </div>
+      <div class="donuts-grid" id="donutsGrid">
+        <a href="product.html" class="product-card" data-cat="classic" data-price="2.50">
+          <span class="product-tag tag-fav">❤️ Fan Fav</span>
+          <span class="product-emoji">🍩</span>
+          <div class="stars">★★★★★ <span class="text-muted">(324)</span></div>
+          <div class="product-name">Classic Glazed</div>
+          <div class="product-desc">Golden, fluffy, perfectly glazed. The OG.</div>
+          <div class="product-footer"><span class="product-price">$2.50</span><button class="add-btn"
+              onclick="event.preventDefault();addToCart(this)">+ Add</button></div>
+        </a>
+        <a href="product.html" class="product-card" data-cat="chocolate" data-price="3.00">
+          <span class="product-tag tag-hot">🔥 Hot Pick</span>
+          <span class="product-emoji">🍫</span>
+          <div class="stars">★★★★★ <span class="text-muted">(286)</span></div>
+          <div class="product-name">Double Choco</div>
+          <div class="product-desc">Chocolate dough + chocolate glaze. Heaven.</div>
+          <div class="product-footer"><span class="product-price">$3.00</span><button class="add-btn add-btn--orange"
+              onclick="event.preventDefault();addToCart(this)">+ Add</button></div>
+        </a>
+        <a href="product.html" class="product-card" data-cat="fruit" data-price="3.25">
+          <span class="product-tag tag-new">✨ New!</span>
+          <span class="product-emoji">🍓</span>
+          <div class="stars">★★★★☆ <span class="text-muted">(98)</span></div>
+          <div class="product-name">Strawberry Dream</div>
+          <div class="product-desc">Fresh strawberry glaze + rainbow sprinkles.</div>
+          <div class="product-footer"><span class="product-price">$3.25</span><button class="add-btn add-btn--blue"
+              onclick="event.preventDefault();addToCart(this)">+ Add</button></div>
+        </a>
+        <a href="product.html" class="product-card" data-cat="special" data-price="3.50">
+          <span class="product-tag tag-fav">⭐ Top Rated</span>
+          <span class="product-emoji">🥜</span>
+          <div class="stars">★★★★★ <span class="text-muted">(201)</span></div>
+          <div class="product-name">PB Bliss</div>
+          <div class="product-desc">Peanut butter filling + crunchy honey glaze.</div>
+          <div class="product-footer"><span class="product-price">$3.50</span><button class="add-btn add-btn--green"
+              onclick="event.preventDefault();addToCart(this)">+ Add</button></div>
+        </a>
+        <a href="product.html" class="product-card" data-cat="special" data-price="4.00">
+          <span class="product-tag tag-limited">🌈 Limited</span>
+          <span class="product-emoji">🌈</span>
+          <div class="stars">★★★★★ <span class="text-muted">(143)</span></div>
+          <div class="product-name">Rainbow Party</div>
+          <div class="product-desc">Six-color sprinkle explosion. Pure party vibes.</div>
+          <div class="product-footer"><span class="product-price">$4.00</span><button class="add-btn add-btn--blue"
+              onclick="event.preventDefault();addToCart(this)">+ Add</button></div>
+        </a>
+        <a href="product.html" class="product-card" data-cat="vegan" data-price="3.75">
+          <span class="product-tag tag-vegan">🌱 Vegan</span>
+          <span class="product-emoji">🍋</span>
+          <div class="stars">★★★★☆ <span class="text-muted">(77)</span></div>
+          <div class="product-name">Lemon Zest</div>
+          <div class="product-desc">Bright lemon glaze, vegan-friendly delight.</div>
+          <div class="product-footer"><span class="product-price">$3.75</span><button class="add-btn add-btn--yellow"
+              onclick="event.preventDefault();addToCart(this)">+ Add</button></div>
+        </a>
+        <a href="product.html" class="product-card" data-cat="classic" data-price="2.75">
+          <span class="product-tag tag-fav">❤️ Classic</span>
+          <span class="product-emoji">🍮</span>
+          <div class="stars">★★★★★ <span class="text-muted">(189)</span></div>
+          <div class="product-name">Vanilla Cloud</div>
+          <div class="product-desc">Soft vanilla custard filling. Light as air.</div>
+          <div class="product-footer"><span class="product-price">$2.75</span><button class="add-btn"
+              onclick="event.preventDefault();addToCart(this)">+ Add</button></div>
+        </a>
+        <a href="product.html" class="product-card" data-cat="fruit" data-price="3.50">
+          <span class="product-tag tag-new">✨ New!</span>
+          <span class="product-emoji">🍊</span>
+          <div class="stars">★★★★☆ <span class="text-muted">(54)</span></div>
+          <div class="product-name">Orange Burst</div>
+          <div class="product-desc">Tangy orange glaze, zesty &amp; refreshing.</div>
+          <div class="product-footer"><span class="product-price">$3.50</span><button class="add-btn add-btn--orange"
+              onclick="event.preventDefault();addToCart(this)">+ Add</button></div>
+        </a>
+        <a href="product.html" class="product-card" data-cat="chocolate" data-price="3.25">
+          <span class="product-tag tag-hot">🔥 Hot Pick</span>
+          <span class="product-emoji">☕</span>
+          <div class="stars">★★★★★ <span class="text-muted">(212)</span></div>
+          <div class="product-name">Mocha Rush</div>
+          <div class="product-desc">Espresso glaze + chocolate chips. Wake up!</div>
+          <div class="product-footer"><span class="product-price">$3.25</span><button class="add-btn add-btn--mocha"
+              onclick="event.preventDefault();addToCart(this)">+ Add</button></div>
+        </a>
+        <a href="product.html" class="product-card" data-cat="special" data-price="5.00">
+          <span class="product-tag tag-premium">👑 Premium</span>
+          <span class="product-emoji">🍰</span>
+          <div class="stars">★★★★★ <span class="text-muted">(88)</span></div>
+          <div class="product-name">Cheesecake Supreme</div>
+          <div class="product-desc">Real cheesecake filling. This is the one.</div>
+          <div class="product-footer"><span class="product-price">$5.00</span><button class="add-btn add-btn--purple"
+              onclick="event.preventDefault();addToCart(this)">+ Add</button></div>
+        </a>
+        <a href="product.html" class="product-card" data-cat="vegan" data-price="3.50">
+          <span class="product-tag tag-vegan">🌱 Vegan</span>
+          <span class="product-emoji">🫐</span>
+          <div class="stars">★★★★☆ <span class="text-muted">(61)</span></div>
+          <div class="product-name">Blueberry Bliss</div>
+          <div class="product-desc">Fresh blueberry glaze, totally plant-based.</div>
+          <div class="product-footer"><span class="product-price">$3.50</span>
+            <button class="add-btn add-btn--dark-purple" onclick="event.preventDefault();addToCart(this)">+ Add</button>
+          </div>
+        </a>
+        <a href="product.html" class="product-card" data-cat="classic" data-price="2.50">
+          <span class="product-tag tag-fav">❤️ Fan Fav</span>
+          <span class="product-emoji">🍯</span>
+          <div class="stars">★★★★★ <span class="text-muted">(176)</span></div>
+          <div class="product-name">Honey Glaze</div>
+          <div class="product-desc">Pure wildflower honey glaze. Sweet &amp; sticky.</div>
+          <div class="product-footer"><span class="product-price">$2.50</span><button class="add-btn add-btn--yellow"
+              onclick="event.preventDefault();addToCart(this)">+ Add</button></div>
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast">
+    🍩 Added to cart!
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">🍩 <span>Doughy</span></div>
+        <div class="footer-desc">The happiest donut shop in the universe. Made with love, glazed with joy, delivered
+          with a smile since 2020.</div>
+      </div>
+      <div>
+        <div class="footer-heading">Shop</div>
+        <ul class="footer-links">
+          <li><a href="shop.html">All Donuts</a></li>
+          <li><a href="shop.html">Classic Glazed</a></li>
+          <li><a href="shop.html">Specialty</a></li>
+          <li><a href="shop.html">Boxes &amp; Bundles</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Help</div>
+        <ul class="footer-links">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="delivery.html">Delivery Info</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+          <li><a href="account.html">My Account</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+          <li><a href="#">Careers 🍩</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>🍩 2024 Doughy. All rights reserved. Made with 🍩 and love.</p>
+      <p>🍩 Atia Hegazy — atiaeno.com</p>
+    </div>
+  </footer>
+
+  <script>
+    function openMobileNav() {
+      document.getElementById('mobileNav').classList.add('open');
+      document.querySelector('.hamburger').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('open');
+      document.querySelector('.hamburger').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function addToCart(btn) {
+      btn.classList.add('wiggle');
+      setTimeout(() => btn.classList.remove('wiggle'), 500);
+      const toast = document.getElementById('toast');
+      toast.style.transform = 'translateY(0)';
+      setTimeout(() => { toast.style.transform = 'translateY(120px)'; }, 2200);
+    }
+
+    let activeCategory = 'all';
+
+    function toggleFilter(el, cat) {
+      document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+      el.classList.add('active');
+      activeCategory = cat;
+      filterDonuts();
+    }
+
+    function filterDonuts() {
+      const search = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.querySelectorAll('#donutsGrid .product-card');
+      let count = 0;
+      cards.forEach(card => {
+        const cat = card.dataset.cat;
+        const name = card.querySelector('.product-name').textContent.toLowerCase();
+        const catMatch = activeCategory === 'all' || cat === activeCategory;
+        const searchMatch = name.includes(search);
+        if (catMatch && searchMatch) { card.style.display = ''; count++; } else { card.style.display = 'none'; }
+      });
+      document.getElementById('resultCount').textContent = count;
+    }
+
+    function sortDonuts(val) {
+      const grid = document.getElementById('donutsGrid');
+      const cards = Array.from(grid.querySelectorAll('.product-card'));
+      if (val === 'price-low') cards.sort((a, b) => parseFloat(a.dataset.price) - parseFloat(b.dataset.price));
+      else if (val === 'price-high') cards.sort((a, b) => parseFloat(b.dataset.price) - parseFloat(a.dataset.price));
+      cards.forEach(c => grid.appendChild(c));
+    }
+  </script>
+
+  <!-- COOKIE CONSENT BAR -->
+  <div class="cookie-bar" id="cookieBar">
+    <div class="cookie-bar-content">
+      <span class="cookie-bar-emoji">🍪</span>
+      <div class="cookie-bar-text">We use cookies to make your experience sweeter! By continuing, you agree to our <a
+          href="cookies.html">Cookie Policy</a>.</div>
+    </div>
+    <div class="cookie-bar-actions">
+      <button class="cookie-btn cookie-btn--accept" onclick="acceptCookies()">Accept All</button>
+      <button class="cookie-btn cookie-btn--settings" onclick="window.location.href='cookies.html'">Settings</button>
+    </div>
+  </div>
+  <script>
+    if (!localStorage.getItem('doughy_consent')) {
+      setTimeout(function () { document.getElementById('cookieBar').classList.add('show'); }, 1500);
+    }
+    function acceptCookies() {
+      localStorage.setItem('doughy_consent', 'accepted');
+      document.getElementById('cookieBar').classList.remove('show');
+    }
+  </script>
+</body>
+
+</html>

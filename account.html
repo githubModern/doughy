@@ -1,0 +1,462 @@
+<!-- © Atia Hegazy — atiaeno.com -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Account — Doughy 🍩</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">🍩 <span>Doughy</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="product.html">Flavors</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-white btn-sm">👤 Login</a>
+      <a href="register.html" class="btn btn-yellow btn-sm">✨ Register</a>
+      <a href="cart.html" class="btn btn-pink cart-btn btn-sm">🛒 Cart <span class="cart-badge">3</span></a>
+    </div>
+    <button class="hamburger" onclick="openMobileNav()"
+      aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-overlay" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-drawer">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="mobile-nav-logo">🍩 <span>Doughy</span></a>
+        <div class="mobile-close" onclick="closeMobileNav()">✕</div>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html">🏠 Home</a>
+        <a href="shop.html">🍩 Shop</a>
+        <a href="product.html">✨ Flavors</a>
+      </div>
+      <div class="mobile-nav-actions">
+        <a href="login.html" class="btn btn-white">👤 Login</a>
+        <a href="register.html" class="btn btn-yellow">✨ Register</a>
+        <a href="cart.html" class="btn btn-pink cart-btn">🛒 Cart <span class="cart-badge">3</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROFILE HEADER -->
+  <div class="profile-header">
+    <div class="ph-blob1"></div>
+    <div class="ph-blob2"></div>
+    <div class="profile-header-inner">
+      <div class="avatar-wrap">😋</div>
+      <div class="profile-info">
+        <h1 class="profile-name">Hey, <span>Jamie!</span> 🍩</h1>
+        <p class="profile-handle">@jamielovesdonuts · Member since Jan 2023</p>
+        <div class="profile-badges-row">
+          <span class="profile-badge badge-gold">👑 Gold Member</span>
+          <span class="profile-badge badge-pink">❤️ 47 Orders</span>
+          <span class="profile-badge badge-green">🌟 Loyalty VIP</span>
+          <span class="profile-badge badge-blue">🔥 Top 5% Customer</span>
+        </div>
+      </div>
+    </div>
+    <div class="account-tabs">
+      <div class="acc-tab active" onclick="showTab('overview', this)">🏠 Overview</div>
+      <div class="acc-tab" onclick="showTab('orders', this)">📦 Orders</div>
+      <div class="acc-tab" onclick="showTab('wishlist', this)">❤️ Wishlist</div>
+      <div class="acc-tab" onclick="showTab('addresses', this)">🏠 Addresses</div>
+      <div class="acc-tab" onclick="showTab('settings', this)">⚙️ Settings</div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="account-content">
+
+    <!-- OVERVIEW -->
+    <div class="tab-panel active" id="panel-overview">
+      <div class="stats-grid">
+        <div class="stat-card stat-card--pink">
+          <span class="stat-icon">📦</span>
+          <div class="stat-num">47</div>
+          <div class="stat-label">Total Orders</div>
+        </div>
+        <div class="stat-card stat-card--yellow">
+          <span class="stat-icon">🍩</span>
+          <div class="stat-num">183</div>
+          <div class="stat-label">Donuts Eaten</div>
+        </div>
+        <div class="stat-card stat-card--green">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-num">2,480</div>
+          <div class="stat-label">Loyalty Points</div>
+        </div>
+        <div class="stat-card stat-card--blue">
+          <span class="stat-icon">💰</span>
+          <div class="stat-num">$142</div>
+          <div class="stat-label">Total Savings</div>
+        </div>
+      </div>
+
+      <!-- LOYALTY CARD -->
+      <div class="loyalty-card">
+        <div class="loyalty-label">🌟 Doughy Loyalty Points</div>
+        <div class="loyalty-pts">2,480</div>
+        <div class="loyalty-pts-label">points · Worth ~$24.80 in rewards</div>
+        <div class="loyalty-progress-track">
+          <div class="loyalty-progress-fill"></div>
+        </div>
+        <div class="loyalty-progress-labels">
+          <span>2,480 pts</span>
+          <span>3,000 pts = 🏆 Platinum Status!</span>
+        </div>
+        <p class="loyalty-note">520 more points to Platinum! Keep ordering! 🍩</p>
+      </div>
+
+      <!-- ACTIVE ORDER -->
+      <h2 class="section-heading-md">🛵 Active Order</h2>
+      <div class="order-card order-card--active">
+        <div>
+          <div class="order-id">#DOU-20240316</div>
+          <div class="order-date">Today · 2:34 PM</div>
+        </div>
+        <div class="order-items-preview">
+          <span class="order-item-emoji">🍩</span>
+          <span class="order-item-emoji">🍫</span>
+          <span class="order-item-emoji">🍓</span>
+        </div>
+        <span class="order-status status-transit">🛵 On the Way!</span>
+        <div class="order-total">$12.15</div>
+        <div class="order-actions">
+          <button class="order-btn order-btn--track" onclick="alert('Track order: ETA 8 minutes! 🛵')">Live
+            Track</button>
+        </div>
+      </div>
+
+      <!-- QUICK LINKS -->
+      <h2 class="section-heading-md mt-32">⚡ Quick Actions</h2>
+      <div class="quick-actions">
+        <button class="btn btn-pink" onclick="showTab('orders',null)">📦 View All Orders</button>
+        <a href="shop.html" class="btn btn-yellow">🍩 Order Again</a>
+        <button class="btn btn-white" onclick="showTab('wishlist',null)">❤️ My Wishlist</button>
+        <button class="btn btn-white" onclick="showTab('settings',null)">⚙️ Edit Profile</button>
+      </div>
+    </div>
+
+    <!-- ORDERS -->
+    <div class="tab-panel" id="panel-orders">
+      <h2 class="section-heading-lg">📦 Order History</h2>
+      <div class="orders-list">
+        <div class="order-card">
+          <div>
+            <div class="order-id">#DOU-20240316</div>
+            <div class="order-date">Mar 16, 2024</div>
+          </div>
+          <div class="order-items-preview"><span class="order-item-emoji">🍩</span><span
+              class="order-item-emoji">🍫</span><span class="order-item-emoji">🍓</span></div>
+          <span class="order-status status-transit">🛵 On the Way!</span>
+          <div class="order-total">$12.15</div>
+          <div class="order-actions">
+            <button class="order-btn" onclick="alert('Tracking...')">Track</button>
+            <button class="order-btn reorder" onclick="showToast('Reordered! 🍩')">Reorder</button>
+          </div>
+        </div>
+        <div class="order-card">
+          <div>
+            <div class="order-id">#DOU-20240309</div>
+            <div class="order-date">Mar 9, 2024</div>
+          </div>
+          <div class="order-items-preview"><span class="order-item-emoji">🥜</span><span
+              class="order-item-emoji">🌈</span><span class="order-item-emoji">🍩</span><span
+              class="order-item-emoji">🍩</span></div>
+          <span class="order-status status-delivered">✅ Delivered</span>
+          <div class="order-total">$16.50</div>
+          <div class="order-actions">
+            <button class="order-btn" onclick="alert('Receipt sent to your email!')">Receipt</button>
+            <button class="order-btn reorder" onclick="showToast('Reordered! 🍩')">Reorder</button>
+          </div>
+        </div>
+        <div class="order-card">
+          <div>
+            <div class="order-id">#DOU-20240302</div>
+            <div class="order-date">Mar 2, 2024</div>
+          </div>
+          <div class="order-items-preview"><span class="order-item-emoji">🍫</span><span
+              class="order-item-emoji">☕</span><span class="order-item-emoji">🍓</span></div>
+          <span class="order-status status-delivered">✅ Delivered</span>
+          <div class="order-total">$9.50</div>
+          <div class="order-actions">
+            <button class="order-btn" onclick="alert('Receipt sent!')">Receipt</button>
+            <button class="order-btn reorder" onclick="showToast('Reordered! 🍩')">Reorder</button>
+          </div>
+        </div>
+        <div class="order-card">
+          <div>
+            <div class="order-id">#DOU-20240223</div>
+            <div class="order-date">Feb 23, 2024</div>
+          </div>
+          <div class="order-items-preview"><span class="order-item-emoji">🍩</span><span
+              class="order-item-emoji">🍩</span><span class="order-item-emoji">🍩</span><span
+              class="order-item-emoji">🍩</span><span class="order-item-emoji">🍩</span><span
+              class="order-item-emoji">🍩</span></div>
+          <span class="order-status status-delivered">✅ Delivered</span>
+          <div class="order-total">$15.00</div>
+          <div class="order-actions">
+            <button class="order-btn" onclick="alert('Receipt sent!')">Receipt</button>
+            <button class="order-btn reorder" onclick="showToast('Reordered! 🍩')">Reorder</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WISHLIST -->
+    <div class="tab-panel" id="panel-wishlist">
+      <h2 class="section-heading-lg">❤️ My Wishlist</h2>
+      <div class="wishlist-grid">
+        <div class="wish-card">
+          <button class="wish-remove" onclick="this.parentElement.remove()">✕</button>
+          <span class="wish-emoji">🍰</span>
+          <div class="wish-name">Cheesecake Supreme</div>
+          <div class="wish-price">$5.00</div>
+          <a href="cart.html" class="btn btn-pink btn-wish-cart">Add to Cart</a>
+        </div>
+        <div class="wish-card wish-card--tilt-left">
+          <button class="wish-remove" onclick="this.parentElement.remove()">✕</button>
+          <span class="wish-emoji">🌈</span>
+          <div class="wish-name">Rainbow Party</div>
+          <div class="wish-price">$4.00</div>
+          <a href="cart.html" class="btn btn-pink btn-wish-cart">Add to Cart</a>
+        </div>
+        <div class="wish-card">
+          <button class="wish-remove" onclick="this.parentElement.remove()">✕</button>
+          <span class="wish-emoji">🫐</span>
+          <div class="wish-name">Blueberry Bliss</div>
+          <div class="wish-price">$3.50</div>
+          <a href="cart.html" class="btn btn-pink btn-wish-cart">Add to Cart</a>
+        </div>
+        <div class="wish-card wish-card--tilt-right">
+          <button class="wish-remove" onclick="this.parentElement.remove()">✕</button>
+          <span class="wish-emoji">☕</span>
+          <div class="wish-name">Mocha Rush</div>
+          <div class="wish-price">$3.25</div>
+          <a href="cart.html" class="btn btn-pink btn-wish-cart">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADDRESSES -->
+    <div class="tab-panel" id="panel-addresses">
+      <h2 class="section-heading-lg">🏠 Saved Addresses</h2>
+      <div class="addresses-grid">
+        <div class="address-card default">
+          <span class="address-default-tag">⭐ Default</span>
+          <div class="address-icon">🏠</div>
+          <div class="address-name">Home</div>
+          <div class="address-text">123 Donut Street, Apt 4B<br>Sprinkle City, NY 10001<br>United States</div>
+          <div class="address-actions">
+            <button class="addr-btn" onclick="alert('Edit address')">✏️ Edit</button>
+            <button class="addr-btn addr-btn--default" onclick="alert('Already default!')">⭐ Default</button>
+          </div>
+        </div>
+        <div class="address-card">
+          <div class="address-icon">🏢</div>
+          <div class="address-name">Office</div>
+          <div class="address-text">456 Glaze Avenue, Floor 3<br>Frosting District, NY 10002<br>United States</div>
+          <div class="address-actions">
+            <button class="addr-btn" onclick="alert('Edit address')">✏️ Edit</button>
+            <button class="addr-btn" onclick="alert('Set as default!')">⭐ Set Default</button>
+            <button class="addr-btn addr-btn--delete" onclick="this.closest('.address-card').remove()">🗑️</button>
+          </div>
+        </div>
+        <div class="add-address-card" onclick="alert('Add new address!')">
+          <span class="add-address-icon">➕</span> Add New Address
+        </div>
+      </div>
+    </div>
+
+    <!-- SETTINGS -->
+    <div class="tab-panel" id="panel-settings">
+      <h2 class="section-heading-lg">⚙️ Account Settings</h2>
+      <div class="settings-grid">
+        <div class="settings-card">
+          <h3 class="settings-card-title">👤 Personal Info</h3>
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input class="form-input" type="text" value="Jamie" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input class="form-input" type="text" value="Smith" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input class="form-input" type="email" value="jamie@email.com" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone</label>
+            <input class="form-input" type="tel" value="+1 (555) 123-4567" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Birthday 🎂 (for free donut!)</label>
+            <input class="form-input" type="date" value="1995-03-16" />
+          </div>
+          <button class="btn btn-pink btn-full mt-8" onclick="showToast('Profile saved! ✅')">Save Changes</button>
+        </div>
+
+        <div>
+          <div class="settings-card mb-24">
+            <h3 class="settings-card-title">🔔 Notifications</h3>
+            <div class="toggle-row">
+              <div class="toggle-info"><strong>Order Updates</strong><span>Track your delivery in real time</span></div>
+              <div class="toggle on" onclick="this.classList.toggle('on')"></div>
+            </div>
+            <div class="toggle-row">
+              <div class="toggle-info"><strong>Promotions &amp; Deals</strong><span>Exclusive offers just for you</span>
+              </div>
+              <div class="toggle on" onclick="this.classList.toggle('on')"></div>
+            </div>
+            <div class="toggle-row">
+              <div class="toggle-info"><strong>New Flavors</strong><span>First to know about new donuts!</span></div>
+              <div class="toggle on" onclick="this.classList.toggle('on')"></div>
+            </div>
+            <div class="toggle-row">
+              <div class="toggle-info"><strong>SMS Alerts</strong><span>Text updates on your order</span></div>
+              <div class="toggle" onclick="this.classList.toggle('on')"></div>
+            </div>
+          </div>
+
+          <div class="settings-card">
+            <h3 class="settings-card-title">🔒 Security</h3>
+            <div class="form-group">
+              <label class="form-label">Current Password</label>
+              <input class="form-input" type="password" placeholder="••••••••" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">New Password</label>
+              <input class="form-input" type="password" placeholder="••••••••" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Confirm New Password</label>
+              <input class="form-input" type="password" placeholder="••••••••" />
+            </div>
+            <button class="btn btn-white btn-full mt-8" onclick="showToast('Password updated! 🔒')">Update
+              Password</button>
+            <div class="logout-section">
+              <button class="btn btn-ghost-red btn-sm"
+                onclick="if(confirm('Log out?'))alert('Logged out. See you soon! 🍩')">🚪 Log Out</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="toast" id="toast">
+    🍩 Done!
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">🍩 <span>Doughy</span></div>
+        <div class="footer-desc">The happiest donut shop in the universe. Made with love, glazed with joy, delivered
+          with a smile since 2020.</div>
+      </div>
+      <div>
+        <div class="footer-heading">Shop</div>
+        <ul class="footer-links">
+          <li><a href="shop.html">All Donuts</a></li>
+          <li><a href="shop.html">Classic Glazed</a></li>
+          <li><a href="shop.html">Specialty</a></li>
+          <li><a href="shop.html">Boxes &amp; Bundles</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Help</div>
+        <ul class="footer-links">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="delivery.html">Delivery Info</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+          <li><a href="account.html">My Account</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+          <li><a href="#">Careers 🍩</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Doughy. All rights reserved. Made with 🍩 and love.</p>
+      <p>© Atia Hegazy — atiaeno.com</p>
+    </div>
+  </footer>
+
+  <script>
+    function openMobileNav() {
+      document.getElementById('mobileNav').classList.add('open');
+      document.querySelector('.hamburger').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('open');
+      document.querySelector('.hamburger').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function showTab(id, btn) {
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.acc-tab').forEach(t => t.classList.remove('active'));
+      document.getElementById('panel-' + id).classList.add('active');
+      if (btn) btn.classList.add('active');
+      else {
+        const tabs = document.querySelectorAll('.acc-tab');
+        const map = { overview: 0, orders: 1, wishlist: 2, addresses: 3, settings: 4 };
+        if (map[id] !== undefined) tabs[map[id]].classList.add('active');
+      }
+    }
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg || '🍩 Done!';
+      toast.style.transform = 'translateY(0)';
+      setTimeout(() => { toast.style.transform = 'translateY(120px)'; }, 2200);
+    }
+  </script>
+
+  <!-- COOKIE CONSENT BAR -->
+  <div class="cookie-bar" id="cookieBar">
+    <div class="cookie-bar-content">
+      <span class="cookie-bar-emoji">🍪</span>
+      <div class="cookie-bar-text">We use cookies to make your experience sweeter! By continuing, you agree to our <a
+          href="cookies.html">Cookie Policy</a>.</div>
+    </div>
+    <div class="cookie-bar-actions">
+      <button class="cookie-btn cookie-btn--accept" onclick="acceptCookies()">Accept All</button>
+      <button class="cookie-btn cookie-btn--settings" onclick="window.location.href='cookies.html'">Settings</button>
+    </div>
+  </div>
+  <script>
+    if (!localStorage.getItem('doughy_consent')) {
+      setTimeout(function () { document.getElementById('cookieBar').classList.add('show'); }, 1500);
+    }
+    function acceptCookies() {
+      localStorage.setItem('doughy_consent', 'accepted');
+      document.getElementById('cookieBar').classList.remove('show');
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+<!-- © Atia Hegazy — atiaeno.com -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Doughy 🍩</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">🍩 <span>Doughy</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="product.html">Flavors</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-white btn-sm">👤 Login</a>
+      <a href="register.html" class="btn btn-yellow btn-sm">✨ Register</a>
+      <a href="cart.html" class="btn btn-pink cart-btn btn-sm">🛒 Cart <span class="cart-badge">3</span></a>
+    </div>
+    <button class="hamburger" onclick="openMobileNav()"
+      aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-overlay" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-drawer">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="mobile-nav-logo">🍩 <span>Doughy</span></a>
+        <div class="mobile-close" onclick="closeMobileNav()">✕</div>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html">🏠 Home</a>
+        <a href="shop.html">🍩 Shop</a>
+        <a href="product.html">✨ Flavors</a>
+      </div>
+      <div class="mobile-nav-actions">
+        <a href="login.html" class="btn btn-white">👤 Login</a>
+        <a href="register.html" class="btn btn-yellow">✨ Register</a>
+        <a href="cart.html" class="btn btn-pink cart-btn">🛒 Cart <span class="cart-badge">3</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-hero">
+    <span class="info-hero-emoji">🔒</span>
+    <span class="info-hero-badge">🛡️ Your Data, Protected</span>
+    <h1>Privacy <span class="text-pink">Policy</span></h1>
+    <p>We take your privacy seriously — almost as seriously as we take our donut recipes.</p>
+  </div>
+
+  <div class="info-page">
+
+    <div class="info-highlight">
+      <h3>🔒 Our Promise</h3>
+      <p>We collect only what we need, we never sell your data, and we protect it like we protect our secret glaze
+        recipe. Your trust matters more than anything.</p>
+    </div>
+
+    <div class="info-content">
+      <h2>📋 Information We Collect</h2>
+      <h3>Information You Provide</h3>
+      <p>When you create an account, place an order, or contact us, we may collect:</p>
+      <ul>
+        <li><strong>Personal details:</strong> Name, email address, phone number</li>
+        <li><strong>Delivery info:</strong> Shipping address, delivery instructions</li>
+        <li><strong>Payment info:</strong> Card details (processed securely via Stripe — we never store your full card
+          number)</li>
+        <li><strong>Account data:</strong> Username, password (encrypted), order history</li>
+        <li><strong>Communications:</strong> Messages you send us, reviews, feedback</li>
+      </ul>
+      <h3>Information Collected Automatically</h3>
+      <p>When you visit our website, we may automatically collect:</p>
+      <ul>
+        <li><strong>Device data:</strong> Browser type, operating system, screen size</li>
+        <li><strong>Usage data:</strong> Pages visited, time spent, clicks</li>
+        <li><strong>Location data:</strong> General location (city-level, for delivery zone estimation)</li>
+        <li><strong>Cookies:</strong> See our <a href="cookies.html">Cookie Policy</a> for full details</li>
+      </ul>
+    </div>
+
+    <div class="info-content">
+      <h2>🎯 How We Use Your Data</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li><strong>Process orders</strong> — bake, pack, and deliver your donuts</li>
+        <li><strong>Manage your account</strong> — loyalty points, order history, preferences</li>
+        <li><strong>Improve our service</strong> — analyze trends, fix bugs, develop new flavors</li>
+        <li><strong>Communicate with you</strong> — order updates, promotions (only if you opt in), support</li>
+        <li><strong>Prevent fraud</strong> — protect against unauthorized transactions</li>
+        <li><strong>Legal compliance</strong> — meet tax, accounting, and regulatory requirements</li>
+      </ul>
+    </div>
+
+    <div class="info-content">
+      <h2>🤝 Data Sharing</h2>
+      <p>We <strong>never sell</strong> your personal data. Period. We only share data with:</p>
+      <ul>
+        <li><strong>Payment processors</strong> (Stripe) — to process transactions securely</li>
+        <li><strong>Delivery partners</strong> — name and address to deliver your order</li>
+        <li><strong>Analytics tools</strong> (Google Analytics) — anonymized usage data only</li>
+        <li><strong>Email service</strong> (if opted in) — to send order updates and newsletters</li>
+        <li><strong>Law enforcement</strong> — only when legally required</li>
+      </ul>
+    </div>
+
+    <div class="info-cards">
+      <div class="info-card info-card--green">
+        <span class="info-card-emoji">🔐</span>
+        <h3>Encrypted</h3>
+        <p>All data is encrypted in transit (SSL/TLS) and at rest (AES-256).</p>
+      </div>
+      <div class="info-card info-card--blue">
+        <span class="info-card-emoji">🚫</span>
+        <h3>Never Sold</h3>
+        <p>We will never sell, rent, or trade your personal information.</p>
+      </div>
+      <div class="info-card info-card--pink">
+        <span class="info-card-emoji">🗑️</span>
+        <h3>Right to Delete</h3>
+        <p>Request deletion of your data anytime. We'll comply within 30 days.</p>
+      </div>
+    </div>
+
+    <div class="info-content">
+      <h2>⚙️ Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li><strong>Access</strong> — request a copy of all data we hold about you</li>
+        <li><strong>Correct</strong> — update or fix inaccurate information</li>
+        <li><strong>Delete</strong> — request deletion of your personal data</li>
+        <li><strong>Port</strong> — receive your data in a portable format</li>
+        <li><strong>Object</strong> — opt out of marketing communications at any time</li>
+        <li><strong>Restrict</strong> — limit how we process your data in certain situations</li>
+      </ul>
+      <p>To exercise any of these rights, email us at <a href="mailto:privacy@doughy.com">privacy@doughy.com</a>. We'll
+        respond within 30 days.</p>
+    </div>
+
+    <div class="info-content">
+      <h2>👶 Children's Privacy</h2>
+      <p>Our website is not directed to children under 13. We do not knowingly collect data from children. If you
+        believe a child has provided us with personal information, please contact us immediately.</p>
+    </div>
+
+    <div class="info-content">
+      <h2>🔄 Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. We'll notify you of significant changes via email or a
+        banner on our website. We encourage you to review this page periodically.</p>
+    </div>
+
+    <div class="info-updated">Last updated: April 16, 2026</div>
+
+    <div class="info-cta">
+      <h2>Privacy Questions? 🔒</h2>
+      <p>We're transparent and happy to answer any questions about your data.</p>
+      <a href="mailto:privacy@doughy.com">📧 Contact Privacy Team</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">🍩 <span>Doughy</span></div>
+        <div class="footer-desc">The happiest donut shop in the universe. Made with love, glazed with joy, delivered
+          with a smile since 2020.</div>
+      </div>
+      <div>
+        <div class="footer-heading">Shop</div>
+        <ul class="footer-links">
+          <li><a href="shop.html">All Donuts</a></li>
+          <li><a href="shop.html">Classic Glazed</a></li>
+          <li><a href="shop.html">Specialty</a></li>
+          <li><a href="shop.html">Boxes &amp; Bundles</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Help</div>
+        <ul class="footer-links">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="delivery.html">Delivery Info</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+          <li><a href="account.html">My Account</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+          <li><a href="#">Careers 🍩</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Doughy. All rights reserved. Made with 🍩 and love.</p>
+      <p>&copy; Atia Hegazy — atiaeno.com</p>
+    </div>
+  </footer>
+
+  <script>
+    function openMobileNav() {
+      document.getElementById('mobileNav').classList.add('open');
+      document.querySelector('.hamburger').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('open');
+      document.querySelector('.hamburger').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+  <!-- COOKIE CONSENT BAR -->
+  <div class="cookie-bar" id="cookieBar">
+    <div class="cookie-bar-content">
+      <span class="cookie-bar-emoji">🍪</span>
+      <div class="cookie-bar-text">We use cookies to make your experience sweeter! By continuing, you agree to our <a
+          href="cookies.html">Cookie Policy</a>.</div>
+    </div>
+    <div class="cookie-bar-actions">
+      <button class="cookie-btn cookie-btn--accept" onclick="acceptCookies()">Accept All</button>
+      <button class="cookie-btn cookie-btn--settings" onclick="window.location.href='cookies.html'">Settings</button>
+    </div>
+  </div>
+  <script>
+    if (!localStorage.getItem('doughy_consent')) {
+      setTimeout(function () { document.getElementById('cookieBar').classList.add('show'); }, 1500);
+    }
+    function acceptCookies() {
+      localStorage.setItem('doughy_consent', 'accepted');
+      document.getElementById('cookieBar').classList.remove('show');
+    }
+  </script>
+</body>
+
+</html>

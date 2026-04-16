@@ -1,0 +1,302 @@
+<!-- © Atia Hegazy — atiaeno.com -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account — Doughy 🍩</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="auth-page">
+
+  <nav>
+    <a href="index.html" class="nav-logo">🍩 <span>Doughy</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="product.html">Flavors</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-white btn-sm">👤 Login</a>
+      <a href="register.html" class="btn btn-yellow btn-sm">✨ Register</a>
+      <a href="cart.html" class="btn btn-pink cart-btn btn-sm">🛒 Cart <span class="cart-badge">0</span></a>
+    </div>
+    <button class="hamburger" onclick="openMobileNav()"
+      aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-overlay" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-drawer">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="mobile-nav-logo">🍩 <span>Doughy</span></a>
+        <div class="mobile-close" onclick="closeMobileNav()">✕</div>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html">🏠 Home</a>
+        <a href="shop.html">🍩 Shop</a>
+        <a href="product.html">✨ Flavors</a>
+      </div>
+      <div class="mobile-nav-actions">
+        <a href="login.html" class="btn btn-white">👤 Login</a>
+        <a href="register.html" class="btn btn-yellow">✨ Register</a>
+        <a href="cart.html" class="btn btn-pink cart-btn">🛒 Cart <span class="cart-badge">0</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-layout">
+    <!-- LEFT SIDE -->
+    <aside class="auth-side">
+      <div class="auth-side-emoji">🎉</div>
+      <h2 class="auth-side-title">Join the Fun!</h2>
+      <p class="auth-side-desc">Create your free account and start earning rewards with every donut order.</p>
+      <div class="auth-side-perks">
+        <div class="auth-perk">
+          <span class="auth-perk-icon">🎁</span>
+          <span class="auth-perk-text">500 welcome bonus points</span>
+        </div>
+        <div class="auth-perk">
+          <span class="auth-perk-icon">💰</span>
+          <span class="auth-perk-text">Exclusive member-only deals</span>
+        </div>
+        <div class="auth-perk">
+          <span class="auth-perk-icon">🍩</span>
+          <span class="auth-perk-text">Free donut on your first order</span>
+        </div>
+        <div class="auth-perk">
+          <span class="auth-perk-icon">📦</span>
+          <span class="auth-perk-text">Track orders in real time</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- RIGHT CONTENT -->
+    <main class="auth-content">
+      <div class="auth-content-blob auth-content-blob--1"></div>
+      <div class="auth-content-blob auth-content-blob--2"></div>
+
+      <div class="auth-card">
+        <div class="auth-header">
+          <span class="auth-header-emoji">🍩</span>
+          <h1 class="auth-title">Create <span>Account</span></h1>
+          <p class="auth-subtitle">Join thousands of happy donut lovers!</p>
+        </div>
+
+        <form class="auth-form" id="registerForm" onsubmit="handleRegister(event)">
+          <div class="auth-form-group">
+            <label class="auth-form-label" for="regFirstName">First Name</label>
+            <div class="auth-form-input-wrap">
+              <span class="auth-form-icon">😊</span>
+              <input class="auth-form-input" type="text" id="regFirstName" placeholder="Jamie" required />
+            </div>
+          </div>
+
+          <div class="auth-form-group">
+            <label class="auth-form-label" for="regLastName">Last Name</label>
+            <div class="auth-form-input-wrap">
+              <span class="auth-form-icon">✨</span>
+              <input class="auth-form-input" type="text" id="regLastName" placeholder="Smith" required />
+            </div>
+          </div>
+
+          <div class="auth-form-group">
+            <label class="auth-form-label" for="regEmail">Email Address</label>
+            <div class="auth-form-input-wrap">
+              <span class="auth-form-icon">📧</span>
+              <input class="auth-form-input" type="email" id="regEmail" placeholder="jamie@donutlover.com" required />
+            </div>
+          </div>
+
+          <div class="auth-form-group">
+            <label class="auth-form-label" for="regPhone">Phone Number <span>(optional)</span></label>
+            <div class="auth-form-input-wrap">
+              <span class="auth-form-icon">📱</span>
+              <input class="auth-form-input" type="tel" id="regPhone" placeholder="+1 (555) 123-4567" />
+            </div>
+          </div>
+
+          <div class="auth-form-group">
+            <label class="auth-form-label" for="regPassword">Password</label>
+            <div class="auth-form-input-wrap">
+              <span class="auth-form-icon">🔒</span>
+              <input class="auth-form-input" type="password" id="regPassword" placeholder="Min 8 characters" required
+                minlength="8" oninput="checkStrength(this.value)" />
+              <button type="button" class="auth-form-toggle-pw" onclick="togglePassword('regPassword', this)"
+                aria-label="Show password">👁️</button>
+            </div>
+            <div class="pw-strength" id="pwStrength">
+              <div class="pw-strength-bar" id="pw1"></div>
+              <div class="pw-strength-bar" id="pw2"></div>
+              <div class="pw-strength-bar" id="pw3"></div>
+              <div class="pw-strength-bar" id="pw4"></div>
+            </div>
+            <div class="pw-strength-label" id="pwLabel"></div>
+          </div>
+
+          <div class="auth-form-group">
+            <label class="auth-form-label" for="regConfirmPw">Confirm Password</label>
+            <div class="auth-form-input-wrap">
+              <span class="auth-form-icon">🔐</span>
+              <input class="auth-form-input" type="password" id="regConfirmPw" placeholder="Retype your password"
+                required />
+              <button type="button" class="auth-form-toggle-pw" onclick="togglePassword('regConfirmPw', this)"
+                aria-label="Show password">👁️</button>
+            </div>
+          </div>
+
+          <div class="auth-form-group">
+            <label class="auth-form-label" for="regBirthday">Birthday 🎂 <span>(for free donut!)</span></label>
+            <div class="auth-form-input-wrap">
+              <span class="auth-form-icon">🎂</span>
+              <input class="auth-form-input" type="date" id="regBirthday" />
+            </div>
+          </div>
+
+          <div class="auth-form-row">
+            <label class="auth-checkbox">
+              <input type="checkbox" required />
+              I agree to the <a href="#" class="auth-forgot-link">Terms &amp; Conditions</a>
+            </label>
+          </div>
+
+          <button type="submit" class="auth-submit-btn auth-submit-btn--green">Create My Account 🎉</button>
+
+          <div class="auth-divider">
+            <span class="auth-divider-text">or sign up with</span>
+          </div>
+
+          <div class="auth-socials">
+            <button type="button" class="auth-social-btn" onclick="alert('Google signup coming soon! 🍩')">
+              <span class="auth-social-icon">🔵</span> Google
+            </button>
+            <button type="button" class="auth-social-btn" onclick="alert('Apple signup coming soon! 🍩')">
+              <span class="auth-social-icon">🍎</span> Apple
+            </button>
+          </div>
+
+          <p class="auth-terms">
+            By creating an account you agree to our <a href="terms.html">Terms of Service</a> and <a
+              href="privacy.html">Privacy Policy</a>.
+            We'll never share your data with third parties.
+          </p>
+        </form>
+
+        <p class="auth-footer-text">
+          Already have an account? <a href="login.html" class="auth-footer-link">Sign in here! 👋</a>
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast">🍩 Done!</div>
+
+  <script>
+    function openMobileNav() {
+      document.getElementById('mobileNav').classList.add('open');
+      document.querySelector('.hamburger').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('open');
+      document.querySelector('.hamburger').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function togglePassword(inputId, btn) {
+      const input = document.getElementById(inputId);
+      if (input.type === 'password') {
+        input.type = 'text';
+        btn.textContent = '🙈';
+      } else {
+        input.type = 'password';
+        btn.textContent = '👁️';
+      }
+    }
+    function checkStrength(pw) {
+      const bars = [document.getElementById('pw1'), document.getElementById('pw2'), document.getElementById('pw3'), document.getElementById('pw4')];
+      const label = document.getElementById('pwLabel');
+      bars.forEach(b => b.className = 'pw-strength-bar');
+      label.textContent = '';
+      if (pw.length === 0) return;
+
+      let score = 0;
+      if (pw.length >= 8) score++;
+      if (/[A-Z]/.test(pw)) score++;
+      if (/[0-9]/.test(pw)) score++;
+      if (/[^A-Za-z0-9]/.test(pw)) score++;
+
+      if (score <= 1) {
+        bars[0].classList.add('weak');
+        label.textContent = '😟 Weak — add numbers & symbols';
+        label.style.color = 'var(--orange)';
+      } else if (score === 2) {
+        bars[0].classList.add('medium');
+        bars[1].classList.add('medium');
+        label.textContent = '😐 Fair — getting there!';
+        label.style.color = 'var(--yellow)';
+      } else if (score === 3) {
+        bars[0].classList.add('strong');
+        bars[1].classList.add('strong');
+        bars[2].classList.add('strong');
+        label.textContent = '😊 Good — almost perfect!';
+        label.style.color = 'var(--green)';
+      } else {
+        bars.forEach(b => b.classList.add('strong'));
+        label.textContent = '🔥 Strong — unbreakable!';
+        label.style.color = 'var(--green)';
+      }
+    }
+    function handleRegister(e) {
+      e.preventDefault();
+      const pw = document.getElementById('regPassword').value;
+      const cpw = document.getElementById('regConfirmPw').value;
+      if (pw !== cpw) {
+        alert('Passwords don\'t match! 🍩');
+        return;
+      }
+      const btn = e.target.querySelector('.auth-submit-btn');
+      btn.textContent = '⏳ Creating account...';
+      btn.disabled = true;
+      setTimeout(() => {
+        const toast = document.getElementById('toast');
+        toast.textContent = '🎉 Account created! Welcome to Doughy!';
+        toast.style.transform = 'translateY(0)';
+        setTimeout(() => {
+          toast.style.transform = 'translateY(120px)';
+          window.location.href = 'account.html';
+        }, 1800);
+      }, 1200);
+    }
+  </script>
+
+  <!-- COOKIE CONSENT BAR -->
+  <div class="cookie-bar" id="cookieBar">
+    <div class="cookie-bar-content">
+      <span class="cookie-bar-emoji">🍪</span>
+      <div class="cookie-bar-text">We use cookies to make your experience sweeter! By continuing, you agree to our <a
+          href="cookies.html">Cookie Policy</a>.</div>
+    </div>
+    <div class="cookie-bar-actions">
+      <button class="cookie-btn cookie-btn--accept" onclick="acceptCookies()">Accept All</button>
+      <button class="cookie-btn cookie-btn--settings" onclick="window.location.href='cookies.html'">Settings</button>
+    </div>
+  </div>
+  <script>
+    if (!localStorage.getItem('doughy_consent')) {
+      setTimeout(function () { document.getElementById('cookieBar').classList.add('show'); }, 1500);
+    }
+    function acceptCookies() {
+      localStorage.setItem('doughy_consent', 'accepted');
+      document.getElementById('cookieBar').classList.remove('show');
+    }
+  </script>
+</body>
+
+</html>

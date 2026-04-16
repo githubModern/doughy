@@ -839,7 +839,7 @@ nav {
 /* ---------- CTA BANNER (index) ---------- */
 .cta-banner {
   background: var(--pink);
-  border-top: 3px solid var(--dark);
+ 
   border-bottom: 3px solid var(--dark);
   padding: 80px 48px;
   text-align: center;

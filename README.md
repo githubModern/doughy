@@ -169,7 +169,7 @@ Any static file server. No build step required.
 
 ```bash
 # Clone the repository
-git clone https://github.com/atiaen/doughy.git
+git clone https://github.com/githubModern/doughy.git
 
 # Open directly in browser
 open doughy/index.html
@@ -186,7 +186,7 @@ python -m http.server 8000
 ```bash
 # Clone into your htdocs directory
 cd C:\xampp\htdocs
-git clone https://github.com/atiaen/doughy.git dle
+git clone https://github.com/githubModern/doughy.git dle
 
 # Navigate to http://localhost/dle/index.html
 ```
@@ -272,7 +272,7 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 **Atia Hegazy**
 
 - Website: [atiaeno.com](https://atiaeno.com)
-- GitHub: [@atiaen](https://github.com/atiaen)
+- GitHub: [@githubModern](https://github.com/githubModern)
 
 ---
 

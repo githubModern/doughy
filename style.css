@@ -4696,10 +4696,7 @@ a.auth-submit-btn {
     padding: 24px;
   }
 
-  .cards-grid {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 16px;
-  }
+
 
   .steps-row {
     gap: 16px;
